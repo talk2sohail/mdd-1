@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 11/02/2020 11:46
+    Creation date: 11/02/2020 14:46
     */
 
     @font-face {
@@ -43,6 +43,7 @@
 .flaticon-home-1:before { content: "\f103"; }
 .flaticon-headphones:before { content: "\f104"; }
 .flaticon-settings:before { content: "\f105"; }
+.flaticon-note:before { content: "\f106"; }
     
     $font-Flaticon-user: "\f100";
     $font-Flaticon-home: "\f101";
@@ -50,3 +51,4 @@
     $font-Flaticon-home-1: "\f103";
     $font-Flaticon-headphones: "\f104";
     $font-Flaticon-settings: "\f105";
+    $font-Flaticon-note: "\f106";

@@ -33,6 +33,7 @@
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
+
 .flaticon-user:before {
   content: "\f100";
 }
@@ -51,6 +52,9 @@
 .flaticon-settings:before {
   content: "\f105";
 }
+.flaticon-note:before {
+  content: "\f106";
+}
 
 $font-Flaticon-user: "\f100";
 $font-Flaticon-home: "\f101";
@@ -58,13 +62,15 @@ $font-Flaticon-supermarket: "\f102";
 $font-Flaticon-home-1: "\f103";
 $font-Flaticon-headphones: "\f104";
 $font-Flaticon-settings: "\f105";
+$font-Flaticon-note: "\f106";
+
 [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after,
 [class*=" flaticon-"]:after {
   font-family: Flaticon;
   font-style: normal;
-  color: #333;
+  color: #1b1b1b;
 }
 .glyph-icon {
   display: block;
@@ -73,7 +79,7 @@ $font-Flaticon-settings: "\f105";
 $colors: (
   font-white: #fff,
   bgcolor: #f4f8fb,
-  secondary: #66d6ab,
+  primary: #73c2fb,
   font-dark: #1b1b1b
 );
 @function color($color-name) {
@@ -153,7 +159,7 @@ a {
   animation: colorchange 50s infinite; /* animation-name followed by duration in seconds*/ /* you could also use milliseconds (ms) or something like 2.5s */
   -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
   transition: all 0.5s ease 0s;
-  padding: 7px 0;
+  padding: 5px 0;
   #changingword {
     color: color(font-white);
     text-align: center;
@@ -193,7 +199,7 @@ a {
         color: color(font-white);
         font-family: $poppins;
         display: block;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 15px;
         letter-spacing: 0.5px;
       }
@@ -202,18 +208,20 @@ a {
 }
 //++++Main Menu++++//
 header {
-  padding: 15px 0;
+  padding: 20px 0;
   .menuWrapper {
     display: inline-block;
     .menuItem + .menuItem {
-      margin-left: 10px;
+      margin-left: 20px;
     }
     .menuItem {
       display: inline-block;
       a {
-        font-family: $poppins;
+        font-family: $prompt;
         color: color(font-dark);
-        font-size: 18px;
+        font-size: 17px;
+        //text-transform: uppercase;
+        font-weight: 300;
         letter-spacing: 1px;
       }
     }
@@ -227,10 +235,7 @@ header {
       display: inline-block;
       .glyph-icon {
         font-size: 20px;
-        font-weight: 600;
-        &.flaticon-home {
-          font-weight: 400;
-        }
+        font-weight: 300;
       }
     }
   }
@@ -238,6 +243,7 @@ header {
     position: fixed;
     bottom: 25px;
     right: 25px;
+    z-index: 9;
   }
 }
 //++++Banner++++//
@@ -247,27 +253,28 @@ header {
       bottom: 22px;
       li {
         margin: 0;
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
         button {
           padding: 0;
           &:before {
             content: " ";
             background: color(font-white);
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 100%;
           }
         }
         &.slick-active {
           width: 22px;
           position: relative;
-          top: 3px;
+          top: 2px;
           button {
             &:before {
               width: 22px;
-              height: 5px;
+              height: 4px;
               border-radius: 38px;
+              opacity: 1;
             }
           }
         }
@@ -284,5 +291,19 @@ header {
         width: 100%;
       }
     }
+  }
+}
+//++++How we can help section++++//
+.howToHelpWrapper {
+  padding: 50px 0;
+  h3 {
+    font-family: $prompt;
+    font-size: 18px;
+    color: color(primary);
+  }
+  h2 {
+    font-family: $mont;
+    font-size: 54px;
+    font-weight: 400;
   }
 }
