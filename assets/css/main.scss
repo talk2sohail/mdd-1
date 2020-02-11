@@ -79,7 +79,7 @@ $font-Flaticon-note: "\f106";
 $colors: (
   font-white: #fff,
   bgcolor: #f4f8fb,
-  primary: #73c2fb,
+  primary: #007fff,
   font-dark: #1b1b1b
 );
 @function color($color-name) {
@@ -305,5 +305,50 @@ header {
     font-family: $mont;
     font-size: 54px;
     font-weight: 400;
+  }
+  .serviceItem {
+    padding: 0px 20px;
+    margin: 0 0 50px;
+    .itemImage {
+      width: max-content;
+      position: relative;
+      img {
+        position: relative;
+        left: 7px;
+      }
+      &:after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(to top, #fcfcfc 20%, #007fff);
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        bottom: -30px;
+        z-index: -1;
+      }
+    }
+    .contentHolder {
+      margin: 29px 0 5px;
+      h3 {
+        font-size: 28px;
+        margin: 0 0 10px;
+      }
+      p {
+        margin: 0 0 20px;
+        font-size: 14px;
+      }
+      .readMore {
+        p,
+        a {
+          color: color(primary);
+          font-size: 13px;
+          margin: 0;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
