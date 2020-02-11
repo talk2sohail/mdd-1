@@ -1,4 +1,74 @@
 @import "_breakpoints", "_functions", "_variables";
+//++++Icons Font++++//
+@font-face {
+  font-family: "Flaticon";
+  src: url("../font/Flaticon.eot");
+  src: url("../font/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../font/Flaticon.woff2") format("woff2"),
+    url("../font/Flaticon.woff") format("woff"),
+    url("../font/Flaticon.ttf") format("truetype"),
+    url("../font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+.flaticon-user:before {
+  content: "\f100";
+}
+.flaticon-home:before {
+  content: "\f101";
+}
+.flaticon-supermarket:before {
+  content: "\f102";
+}
+.flaticon-home-1:before {
+  content: "\f103";
+}
+.flaticon-headphones:before {
+  content: "\f104";
+}
+.flaticon-settings:before {
+  content: "\f105";
+}
+
+$font-Flaticon-user: "\f100";
+$font-Flaticon-home: "\f101";
+$font-Flaticon-supermarket: "\f102";
+$font-Flaticon-home-1: "\f103";
+$font-Flaticon-headphones: "\f104";
+$font-Flaticon-settings: "\f105";
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-style: normal;
+  color: #333;
+}
+.glyph-icon {
+  display: block;
+}
 //++++Color Variables++++//
 $colors: (
   font-white: #fff,
@@ -132,7 +202,7 @@ a {
 }
 //++++Main Menu++++//
 header {
-  padding: 25px 0;
+  padding: 15px 0;
   .menuWrapper {
     display: inline-block;
     .menuItem + .menuItem {
@@ -150,11 +220,69 @@ header {
   }
   .iconsWrapper {
     display: inline-block;
-    .icons + .icons {
-      margin-left: 10px;
+    .iconsItem + .iconsItem {
+      margin-left: 20px;
     }
-    .icons {
+    .iconsItem {
       display: inline-block;
+      .glyph-icon {
+        font-size: 20px;
+        font-weight: 600;
+        &.flaticon-home {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .whatsappWrapper {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+  }
+}
+//++++Banner++++//
+.bannerWrapper {
+  .bannerSingle {
+    .slick-dots {
+      bottom: 22px;
+      li {
+        margin: 0;
+        width: 10px;
+        height: 10px;
+        button {
+          padding: 0;
+          &:before {
+            content: " ";
+            background: color(font-white);
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+          }
+        }
+        &.slick-active {
+          width: 22px;
+          position: relative;
+          top: 3px;
+          button {
+            &:before {
+              width: 22px;
+              height: 5px;
+              border-radius: 38px;
+            }
+          }
+        }
+      }
+      li + li {
+        margin-left: 10px;
+      }
+    }
+    .bannerItem {
+      img {
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+      }
     }
   }
 }
