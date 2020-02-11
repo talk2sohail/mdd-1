@@ -1,0 +1,160 @@
+@import "_breakpoints", "_functions", "_variables";
+//++++Color Variables++++//
+$colors: (
+  font-white: #fff,
+  bgcolor: #f4f8fb,
+  secondary: #66d6ab,
+  font-dark: #1b1b1b
+);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+//++++Variable Breakpoints++++//
+@mixin breakpoint($point) {
+  @if $point=xlr {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+}
+//++++Fonts++++//
+$prompt: Prompt, sans-serif;
+$poppins: Poppins, sans-serif;
+$mont: Montserrat, sans-serif;
+//++++Keyframes++++//
+@keyframes colorchange {
+  0% {
+    background: #667eea;
+  }
+  30% {
+    background: #764ba2;
+  }
+  60% {
+    background: #00cdac;
+  }
+  100% {
+    background: #3cba92;
+  }
+}
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+  0% {
+    background: #667eea;
+  }
+  30% {
+    background: #764ba2;
+  }
+  60% {
+    background: #00cdac;
+  }
+  100% {
+    background: #3cba92;
+  }
+}
+//++++General CSS++++//
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: $prompt;
+  margin: 0;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $poppins;
+}
+a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.sectionWrapper {
+  max-width: 1280px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+//++++Topbar++++//
+.topBarWrapper {
+  animation: colorchange 50s infinite; /* animation-name followed by duration in seconds*/ /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+  transition: all 0.5s ease 0s;
+  padding: 7px 0;
+  #changingword {
+    color: color(font-white);
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    font-family: $mont;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: max-content;
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+      position: relative;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      padding: 2px 0;
+    }
+    a {
+      color: color(font-white);
+      span {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  .topBarMenu {
+    display: inline-block;
+    .menuItem + .menuItem {
+      margin-left: 5px;
+      padding-left: 8px;
+      border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .menuItem {
+      display: inline-block;
+      a {
+        color: color(font-white);
+        font-family: $poppins;
+        display: block;
+        font-size: 14px;
+        line-height: 15px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+//++++Main Menu++++//
+header {
+  padding: 25px 0;
+  .menuWrapper {
+    display: inline-block;
+    .menuItem + .menuItem {
+      margin-left: 10px;
+    }
+    .menuItem {
+      display: inline-block;
+      a {
+        font-family: $poppins;
+        color: color(font-dark);
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .iconsWrapper {
+    display: inline-block;
+    .icons + .icons {
+      margin-left: 10px;
+    }
+    .icons {
+      display: inline-block;
+    }
+  }
+}
