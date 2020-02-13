@@ -55,6 +55,18 @@
 .flaticon-note:before {
   content: "\f106";
 }
+.flaticon-smartphone:before {
+  content: "\f107";
+}
+.flaticon-phone:before {
+  content: "\f108";
+}
+.flaticon-delivery-boy:before {
+  content: "\f109";
+}
+.flaticon-payment-method:before {
+  content: "\f10a";
+}
 
 $font-Flaticon-user: "\f100";
 $font-Flaticon-home: "\f101";
@@ -63,6 +75,10 @@ $font-Flaticon-home-1: "\f103";
 $font-Flaticon-headphones: "\f104";
 $font-Flaticon-settings: "\f105";
 $font-Flaticon-note: "\f106";
+$font-Flaticon-smartphone: "\f107";
+$font-Flaticon-phone: "\f108";
+$font-Flaticon-delivery-boy: "\f109";
+$font-Flaticon-payment-method: "\f10a";
 
 [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
@@ -78,7 +94,7 @@ $font-Flaticon-note: "\f106";
 //++++Color Variables++++//
 $colors: (
   font-white: #fff,
-  bgcolor: #f4f8fb,
+  bgcolor: #fbfbfb,
   primary: #007fff,
   font-dark: #1b1b1b
 );
@@ -332,12 +348,32 @@ a {
         content: "";
         width: 100px;
         height: 100px;
-        background: linear-gradient(to top, #fcfcfc 20%, #007fff);
+        background: linear-gradient(to top, #fcfcfc 20%, #32cfa7);
         border-radius: 50%;
         position: absolute;
         left: 0px;
         bottom: -30px;
         z-index: -1;
+      }
+      &.crackedScreen {
+        &:after {
+          background: linear-gradient(to top, #fcfcfc 20%, #f5af19);
+        }
+      }
+      &.poorBattery {
+        &:after {
+          background: linear-gradient(to top, #fcfcfc 20%, #ec008cbf);
+        }
+      }
+      &.bentChasis {
+        &:after {
+          background: linear-gradient(to top, #fcfcfc 20%, #2f80edbf);
+        }
+      }
+      &.brokenSpeaker {
+        &:after {
+          background: linear-gradient(to top, #fcfcfc 20%, #6e48aabf);
+        }
       }
     }
     .contentHolder {
@@ -371,18 +407,70 @@ a {
   padding: 50px 0;
   background: color(bgcolor);
   h2 {
-    color: color(primary);
+    color: color(font-dark);
     font-size: 45px;
-    margin: 0 0 45px;
+    margin: 0 0 5px;
   }
   .procedure {
     background: color(font-white);
-    padding: 25px 16px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    padding: 35px 20px;
+    //box-shadow: 0 25px 70px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 40px 140px 0px rgba(171, 181, 189, 0.4);
+    margin: 0 0 40px;
+    border-radius: 6px;
+    .imgWrap {
+      margin: 0 0 15px;
+      .icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          &:before {
+            color: color(font-white);
+          }
+          position: relative;
+          font-size: 34px;
+          left: 3px;
+          top: 2px;
+          &.flaticon-smartphone {
+            left: 0;
+          }
+        }
+        &.mobile {
+          background: linear-gradient(
+            -60deg,
+            rgba(50, 207, 167, 0.75),
+            rgba(150, 201, 61, 0.75)
+          );
+        }
+        &.issue {
+          background: linear-gradient(
+            -60deg,
+            rgba(241, 39, 17, 0.7),
+            rgba(245, 175, 25, 0.7)
+          );
+        }
+        &.repair {
+          background: linear-gradient(
+            -60deg,
+            rgba(236, 0, 140, 0.75),
+            rgba(255, 103, 103, 0.75)
+          );
+        }
+        &.payment {
+          background: linear-gradient(-60deg, #2f80edbf, #56ccf2bf);
+        }
+      }
+    }
     .contentWrap {
       h3 {
-        font-size: 24px;
+        font-size: 26px;
         margin: 0 0 15px;
+        letter-spacing: 1px;
       }
       p {
         font-weight: 300;
@@ -390,5 +478,14 @@ a {
         margin: 0;
       }
     }
+  }
+}
+//++++types of repair++++//
+.typesOfrepair {
+  padding: 50px 0;
+  h2 {
+    color: color(font-dark);
+    font-size: 45px;
+    margin: 0 0 5px;
   }
 }
