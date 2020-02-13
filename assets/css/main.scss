@@ -97,6 +97,7 @@ $colors: (
 $prompt: Prompt, sans-serif;
 $poppins: Poppins, sans-serif;
 $mont: Montserrat, sans-serif;
+$comfor: Comfortaa, cursive;
 //++++Keyframes++++//
 @keyframes colorchange {
   0% {
@@ -141,7 +142,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $poppins;
+  font-family: $comfor;
 }
 a {
   &:hover,
@@ -197,7 +198,7 @@ a {
       display: inline-block;
       a {
         color: color(font-white);
-        font-family: $poppins;
+        font-family: $comfor;
         display: block;
         font-size: 12px;
         line-height: 15px;
@@ -207,8 +208,19 @@ a {
   }
 }
 //++++Main Menu++++//
-header {
+.siteHeader {
   padding: 20px 0;
+  &.sticky {
+    background: color(font-white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    padding: 12px 0;
+    transition: all 0.2s ease 0s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+  }
   .menuWrapper {
     display: inline-block;
     .menuItem + .menuItem {
@@ -297,14 +309,14 @@ header {
 .howToHelpWrapper {
   padding: 50px 0;
   h3 {
-    font-family: $prompt;
+    font-family: $comfor;
     font-size: 18px;
     color: color(primary);
   }
   h2 {
-    font-family: $mont;
-    font-size: 54px;
-    font-weight: 400;
+    font-family: $prompt;
+    font-size: 55px;
+    font-weight: 300;
   }
   .serviceItem {
     padding: 0px 20px;
@@ -314,7 +326,7 @@ header {
       position: relative;
       img {
         position: relative;
-        left: 7px;
+        left: 8px;
       }
       &:after {
         content: "";
@@ -337,6 +349,7 @@ header {
       p {
         margin: 0 0 20px;
         font-size: 14px;
+        font-weight: 300;
       }
       .readMore {
         p,
@@ -344,10 +357,37 @@ header {
           color: color(primary);
           font-size: 13px;
           margin: 0;
+          font-weight: 400;
         }
         a {
           text-decoration: underline;
         }
+      }
+    }
+  }
+}
+//++++Procedure++++//
+.procedureWrapper {
+  padding: 50px 0;
+  background: color(bgcolor);
+  h2 {
+    color: color(primary);
+    font-size: 45px;
+    margin: 0 0 45px;
+  }
+  .procedure {
+    background: color(font-white);
+    padding: 25px 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    .contentWrap {
+      h3 {
+        font-size: 24px;
+        margin: 0 0 15px;
+      }
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        margin: 0;
       }
     }
   }
