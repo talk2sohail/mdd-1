@@ -405,7 +405,7 @@ a {
 //++++Procedure++++//
 .procedureWrapper {
   padding: 50px 0;
-  background: color(bgcolor);
+  // background: color(bgcolor);
   h2 {
     color: color(font-dark);
     font-size: 45px;
@@ -413,18 +413,74 @@ a {
   }
   .procedure {
     background: color(font-white);
-    padding: 35px 20px;
+    padding: 35px 25px;
     //box-shadow: 0 25px 70px rgba(0, 0, 0, 0.07);
     box-shadow: 0px 40px 140px 0px rgba(171, 181, 189, 0.4);
     margin: 0 0 40px;
     border-radius: 6px;
+    &.greenBg {
+      background: url("../images/background/paper-nach-bg-1.svg");
+      transition: transform 175ms ease-in, opacity 175ms ease-in;
+      transform-origin: center;
+      transform: scale(1, 1);
+      background-repeat: no-repeat;
+      background-position: 0 -2%;
+      &:hover {
+        background: url("../images/background/paper-nach-hover.svg");
+        transform: scale(1.05, 1.05);
+        transition: transform 175ms ease-in, opacity 175ms ease-in;
+        transform-origin: center;
+      }
+    }
+    &.yellowBg {
+      background: url("../images/background/instant-refunds-bg-1.svg");
+      transition: transform 175ms ease-in, opacity 175ms ease-in;
+      transform-origin: center;
+      transform: scale(1, 1);
+      background-repeat: no-repeat;
+      background-position: -2% -2%;
+      &:hover {
+        background: url("../images/background/instant-refunds-hover.svg");
+        transform: scale(1.05, 1.05);
+        transition: transform 175ms ease-in, opacity 175ms ease-in;
+        transform-origin: center;
+      }
+    }
+    &.pinkBg {
+      background: url("../images/background/thirdwatch-bg-1.svg");
+      transition: transform 175ms ease-in, opacity 175ms ease-in;
+      transform-origin: center;
+      transform: scale(1, 1);
+      background-repeat: no-repeat;
+      background-position: -2% -2%;
+      &:hover {
+        background: url("../images/background/thirdwatch-hover.svg");
+        transform: scale(1.05, 1.05);
+        transition: transform 175ms ease-in, opacity 175ms ease-in;
+        transform-origin: center;
+      }
+    }
+    &.blueBg {
+      background: url("../images/background/unregistered-bg-1.svg");
+      transition: transform 175ms ease-in, opacity 175ms ease-in;
+      transform-origin: center;
+      transform: scale(1, 1);
+      background-repeat: no-repeat;
+      background-position: -2% -2%;
+      &:hover {
+        background: url("../images/background/unregistered-hover.svg");
+        transform: scale(1.05, 1.05);
+        transition: transform 175ms ease-in, opacity 175ms ease-in;
+        transform-origin: center;
+      }
+    }
     .imgWrap {
       margin: 0 0 15px;
       .icon {
         width: 70px;
         height: 70px;
         border-radius: 100%;
-        margin: 0 auto;
+        // margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -487,5 +543,15 @@ a {
     color: color(font-dark);
     font-size: 45px;
     margin: 0 0 5px;
+  }
+  a {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.11);
+    display: block;
+    color: color(font-dark);
+    padding: 20px;
+    box-shadow: 0px 40px 140px 0px rgba(171, 181, 189, 0.4);
+    p {
+      margin: 10px 0 0;
+    }
   }
 }

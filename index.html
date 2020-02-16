@@ -352,9 +352,9 @@
       <div class="sectionWrapper">
         <div class="row align-items-center justify-content-between">
           <div class="col-12">
-            <h2 class="text-center">Procedure</h2>
+            <h2 class="text-center ">Procedure</h2>
             <p
-              class="w-50 m-auto pb-4 font-light text-center"
+              class="text-center w-50 m-auto pb-4 font-light "
               style="font-weight: 300;"
             >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
@@ -362,15 +362,15 @@
             </p>
           </div>
           <div class="col-12 col-lg-3">
-            <div class="procedure">
+            <div class="procedure blueBg ">
               <div class="imgWrap">
                 <div class="icon mobile">
                   <i class="glyph-icon flaticon-smartphone"></i>
                 </div>
               </div>
               <div class="contentWrap">
-                <h3 class="text-center">Mobile</h3>
-                <p class="text-center">
+                <h3 class="">Mobile</h3>
+                <p class="">
                   Select your mobile brand and model from the list of available
                   brands and devices
                 </p>
@@ -378,15 +378,15 @@
             </div>
           </div>
           <div class="col-12 col-lg-3">
-            <div class="procedure">
+            <div class="procedure yellowBg">
               <div class="imgWrap">
                 <div class="icon issue">
                   <i class="glyph-icon flaticon-phone"></i>
                 </div>
               </div>
               <div class="contentWrap">
-                <h3 class="text-center">Issue</h3>
-                <p class="text-center">
+                <h3 class="">Issue</h3>
+                <p class="">
                   Select your mobile brand and model from the list of available
                   brands and devices
                 </p>
@@ -394,15 +394,15 @@
             </div>
           </div>
           <div class="col-12 col-lg-3">
-            <div class="procedure">
+            <div class="procedure pinkBg">
               <div class="imgWrap">
                 <div class="icon repair">
                   <i class="glyph-icon flaticon-delivery-boy"></i>
                 </div>
               </div>
               <div class="contentWrap">
-                <h3 class="text-center">Repair</h3>
-                <p class="text-center">
+                <h3 class="">Repair</h3>
+                <p class="">
                   Select your mobile brand and model from the list of available
                   brands and devices
                 </p>
@@ -410,7 +410,7 @@
             </div>
           </div>
           <div class="col-12 col-lg-3">
-            <div class="procedure">
+            <div class="procedure greenBg">
               <div class="imgWrap">
                 <div class="icon payment">
                   <i class="glyph-icon flaticon-payment-method"></i>
@@ -442,13 +442,31 @@
               placeat eos enim quibusdam illo dignissimos vel
             </p>
           </div>
+
+          <div class="col-2">
+            <a
+              data-tilt
+              data-tilt-reverse="true"
+              href="javascript:void(0)"
+              class="text-center"
+            >
+              <img
+                src="https://cshprod.s3.amazonaws.com/imageLibrary/Group_1522x_b3591892023a.png"
+                width="100"
+                alt=""
+              />
+              <p>Proximity Sensor</p>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     <script src="assets/js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
     <script>
       $(".bannerSingle").slick({
         dots: true,
@@ -460,13 +478,6 @@
         autoplaySpeed: 2500
         // fade: true,
         // cssEase: "linear"
-      });
-      //Sticky Header
-
-      $(window).on("scroll load", function() {
-        $(window).scrollTop() > $(".siteHeader").outerHeight()
-          ? $(".siteHeader").addClass("sticky")
-          : $(".siteHeader").removeClass("sticky");
       });
     </script>
   </body>
