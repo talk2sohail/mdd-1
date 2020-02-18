@@ -680,3 +680,57 @@ a {
     }
   }
 }
+//++++brands++++//
+.brandsWrapper {
+  padding: 70px 0;
+  background: color(bgcolor);
+  .brandsList {
+    ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+      li + li {
+        padding-left: 15px;
+      }
+      li {
+        img {
+          max-width: 100px;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      left: 50%;
+      top: 82%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.25s;
+      background: #3ecf8e;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(36, 180, 126, 0.4);
+      white-space: nowrap;
+      display: inline-block;
+      height: 35px;
+      line-height: 37px;
+      padding: 0 14px;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+      font-size: 15px;
+      font-family: "Prompt", sans-serif;
+      text-decoration: none;
+      letter-spacing: 0.025em;
+    }
+    &:hover {
+      ul {
+        filter: blur(10px);
+        opacity: 0.7;
+        transform: scale(0.95);
+      }
+      a {
+        opacity: 1;
+      }
+    }
+  }
+}
