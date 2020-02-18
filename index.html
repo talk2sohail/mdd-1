@@ -352,14 +352,13 @@
       <div class="sectionWrapper">
         <div class="row align-items-center justify-content-between">
           <div class="col-12">
-            <h2 class="text-center ">Procedure</h2>
-            <p
-              class="text-center w-50 m-auto pb-4 font-light "
-              style="font-weight: 300;"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              placeat eos enim quibusdam illo dignissimos vel
-            </p>
+            <div class="title">
+              <h2 class="text-center ">Procedure</h2>
+              <p class="text-center w-50 m-auto  ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi placeat eos enim quibusdam illo dignissimos vel
+              </p>
+            </div>
           </div>
           <div class="col-12 col-lg-3">
             <div class="procedure blueBg ">
@@ -433,14 +432,13 @@
       <div class="sectionWrapper">
         <div class="row align-items-center justify-content-between">
           <div class="col-12">
-            <h2 class="text-center">Services</h2>
-            <p
-              class="w-50 m-auto pb-4 font-light text-center"
-              style="font-weight: 300;"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              placeat eos enim quibusdam illo dignissimos vel
-            </p>
+            <div class="title">
+              <h2 class="text-center">Services</h2>
+              <p class="w-50 m-auto text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi placeat eos enim quibusdam illo dignissimos vel
+              </p>
+            </div>
           </div>
         </div>
         <div class="services">
@@ -544,11 +542,24 @@
             </div>
           </a>
         </div>
+        <div
+          class="navWrapAchieve d-flex align-items-center justify-content-end"
+        >
+          <div class="prevAchieve slick-prev d-flex slick-slide">
+            <span>
+              <img src="assets/images/icons/backward.png" alt="" />
+            </span>
+          </div>
+          <div class="nextAchieve slick-next d-flex text-right slick-slide">
+            <span>
+              <img src="assets/images/icons/forward.png" alt="" />
+            </span>
+          </div>
+        </div>
       </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
@@ -561,31 +572,30 @@
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2500
-        // fade: true,
-        // cssEase: "linear"
       });
       $(".services").slick({
         dots: false,
         infinite: false,
+        nav: false,
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 1,
-
+        prevArrow: $(".prevAchieve"),
+        nextArrow: $(".nextAchieve"),
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1199,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+              slidesToScroll: 3
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 991,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2
+              slidesToScroll: 2,
+              infinite: true
             }
           },
           {

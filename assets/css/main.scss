@@ -94,7 +94,7 @@ $font-Flaticon-payment-method: "\f10a";
 //++++Color Variables++++//
 $colors: (
   font-white: #fff,
-  bgcolor: #fbfbfb,
+  bgcolor: #fcfcfe,
   primary: #007fff,
   font-dark: #1b1b1b
 );
@@ -170,6 +170,57 @@ a {
   max-width: 1280px;
   padding: 0 10px;
   margin: 0 auto;
+}
+.title {
+  margin: 0 0 25px;
+  h2 {
+    color: color(font-dark);
+    position: relative;
+    font-size: 45px;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 3px;
+      width: 80px;
+      background-color: #fab4a2;
+      bottom: 0;
+      left: 0;
+      right: 35px;
+      margin: auto;
+      transition: all 0.4s ease;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      height: 3px;
+      width: 32px;
+      background-color: #ff724e;
+      bottom: 0;
+      margin: 0 auto 0;
+      left: 95px;
+      transition: all 0.4s ease;
+      right: 0;
+    }
+    &:hover {
+      &:before {
+        width: 32px;
+        // left: 95px;
+        transition: all 0.4s ease;
+        right: 80px;
+      }
+      &:after {
+        left: 50px;
+        // right: 35px;
+        transition: all 0.4s ease;
+        width: 80px;
+      }
+    }
+  }
+  p {
+    font-weight: 300;
+  }
 }
 //++++Topbar++++//
 .topBarWrapper {
@@ -404,13 +455,13 @@ a {
 }
 //++++Procedure++++//
 .procedureWrapper {
-  padding: 50px 0;
-  // background: color(bgcolor);
-  h2 {
-    color: color(font-dark);
-    font-size: 45px;
-    margin: 0 0 5px;
-  }
+  // padding: 80px 0 145px;
+  // background: url(https://themes.radiantthemes.com/seolounge/wp-content/uploads/2019/02/home-version-8-banner-lower-background-1.png?id=2908);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  background: color(bgcolor);
+  padding: 70px 0;
   .procedure {
     background: color(font-white);
     padding: 35px 25px;
@@ -419,56 +470,56 @@ a {
     margin: 0 0 40px;
     border-radius: 6px;
     &.greenBg {
-      background: url("../images/background/paper-nach-bg-1.svg");
+      background: url("../images/background/paper-nach-bg-1.svg"), #fff;
       transition: transform 175ms ease-in, opacity 175ms ease-in;
       transform-origin: center;
       transform: scale(1, 1);
       background-repeat: no-repeat;
       background-position: 0 -2%;
       &:hover {
-        background: url("../images/background/paper-nach-hover.svg");
+        background: url("../images/background/paper-nach-hover.svg"), #fff;
         transform: scale(1.05, 1.05);
         transition: transform 175ms ease-in, opacity 175ms ease-in;
         transform-origin: center;
       }
     }
     &.yellowBg {
-      background: url("../images/background/instant-refunds-bg-1.svg");
+      background: url("../images/background/instant-refunds-bg-1.svg"), #fff;
       transition: transform 175ms ease-in, opacity 175ms ease-in;
       transform-origin: center;
       transform: scale(1, 1);
       background-repeat: no-repeat;
       background-position: -2% -2%;
       &:hover {
-        background: url("../images/background/instant-refunds-hover.svg");
+        background: url("../images/background/instant-refunds-hover.svg"), #fff;
         transform: scale(1.05, 1.05);
         transition: transform 175ms ease-in, opacity 175ms ease-in;
         transform-origin: center;
       }
     }
     &.pinkBg {
-      background: url("../images/background/thirdwatch-bg-1.svg");
+      background: url("../images/background/thirdwatch-bg-1.svg"), #fff;
       transition: transform 175ms ease-in, opacity 175ms ease-in;
       transform-origin: center;
       transform: scale(1, 1);
       background-repeat: no-repeat;
       background-position: -2% -2%;
       &:hover {
-        background: url("../images/background/thirdwatch-hover.svg");
+        background: url("../images/background/thirdwatch-hover.svg"), #fff;
         transform: scale(1.05, 1.05);
         transition: transform 175ms ease-in, opacity 175ms ease-in;
         transform-origin: center;
       }
     }
     &.blueBg {
-      background: url("../images/background/unregistered-bg-1.svg");
+      background: url("../images/background/unregistered-bg-1.svg"), #fff;
       transition: transform 175ms ease-in, opacity 175ms ease-in;
       transform-origin: center;
       transform: scale(1, 1);
       background-repeat: no-repeat;
       background-position: -2% -2%;
       &:hover {
-        background: url("../images/background/unregistered-hover.svg");
+        background: url("../images/background/unregistered-hover.svg"), #fff;
         transform: scale(1.05, 1.05);
         transition: transform 175ms ease-in, opacity 175ms ease-in;
         transform-origin: center;
@@ -538,11 +589,10 @@ a {
 }
 //++++types of repair++++//
 .typesOfrepair {
-  padding: 50px 0;
-  h2 {
-    color: color(font-dark);
-    font-size: 45px;
-    margin: 0 0 5px;
+  padding: 70px 0;
+  position: relative;
+  .title {
+    margin: 0;
   }
   .slick-slide {
     padding: 0 10px;
@@ -553,7 +603,7 @@ a {
       color: color(font-dark);
       background: transparent;
       border-radius: 10px;
-      box-shadow: 0px 20px 20px 0px rgba(171, 181, 189, 0.4);
+      box-shadow: 0px 15px 20px 0px rgba(171, 181, 189, 0.4);
       &:focus {
         border: 0;
         outline: 0;
@@ -591,6 +641,40 @@ a {
           font-family: $prompt;
           font-size: 20px;
           letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+  .navWrapAchieve {
+    .slick-slide {
+      height: auto;
+      padding: 0;
+      top: 58%;
+      span {
+        display: block;
+        padding: 10px;
+        background: color(font-dark);
+        box-shadow: 0px 15px 20px 0px rgba(171, 181, 189, 0.4);
+        border-radius: 10px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &.slick-disabled {
+        opacity: 0;
+      }
+      &.slick-prev {
+        left: 5%;
+        &:before {
+          content: "";
+        }
+      }
+      &.slick-next {
+        right: 7%;
+
+        &:before {
+          content: "";
         }
       }
     }
