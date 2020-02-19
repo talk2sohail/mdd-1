@@ -391,6 +391,45 @@ a {
       }
     }
   }
+  .bannerVector {
+    .bannerItem {
+      height: calc(100vh - 106.5px);
+      h1,
+      h3 {
+        font-weight: 300;
+        color: color(font-dark);
+        line-height: 55px;
+        margin: 0;
+        span {
+          font-weight: 500;
+        }
+      }
+      h1 {
+        font-size: 45px;
+      }
+      h3 {
+        font-size: 35px;
+      }
+      p {
+        color: color(font-dark);
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 30px;
+      }
+      img {
+        height: 500px;
+      }
+      form {
+        input {
+          outline: 0;
+          border: 0;
+          box-shadow: 0 0 0;
+          padding: 10px 19px;
+          width: 350px;
+        }
+      }
+    }
+  }
 }
 //++++How we can help section++++//
 .howToHelpWrapper {
