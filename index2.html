@@ -202,10 +202,66 @@
                 </p>
                 <form action="#">
                   <input type="search" placeholder="Search Your Problem Here" />
+                  <button type="submit">
+                    <img
+                      src="assets/images/icons/search.png"
+                      width="20"
+                      alt=""
+                    />
+                  </button>
                 </form>
               </div>
               <div class="col-6">
+                <!-- <div class="blobWrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 288 288"
+                  >
+                    <linearGradient
+                      id="PSgrad_0"
+                      x1="70.711%"
+                      x2="0%"
+                      y1="70.711%"
+                      y2="0%"
+                    >
+                      <stop
+                        offset="0%"
+                        stop-color="rgb(95,54,152)"
+                        stop-opacity="1"
+                      />
+                      <stop
+                        offset="100%"
+                        stop-color="rgb(247,109,138)"
+                        stop-opacity="1"
+                      />
+                    </linearGradient>
+                    <path fill="url(#PSgrad_0)" />
+                  </svg>
+                </div> -->
                 <img src="assets/images/banner/repairIconOne.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="bannerItem">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-6">
+                <h1><span>Repair Your </span> Phone</h1>
+                <h3>By Expert</h3>
+                <p>
+                  Get Instant Access to reliable and affordable services Get
+                  Instant Access to reliable and affordable services
+                </p>
+                <div class="d-flex buttons flex-wrap justify-content-start">
+                  <a href="javascript:void(0);">
+                    <span>repair now</span>
+                  </a>
+                  <a href="javascript:void(0)">collaborate</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <img src="assets/images/banner/repairIconTwo.png" alt="" />
               </div>
             </div>
           </div>
@@ -682,7 +738,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
               aliquid repellendus asperiores quis
             </p>
-            <div class="d-flex flex-wrap justify-content-start">
+            <div class="d-flex buttons flex-wrap justify-content-start">
               <a href="javascript:void(0);">
                 <span>repair now</span>
               </a>
@@ -724,8 +780,11 @@
               <li>
                 <a href="javascript:void(0)">Blog</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="javascript:void(0)">Sitemap</a>
+              </li> -->
+              <li>
+                <a href="javascript:void(0)">Brands</a>
               </li>
             </ul>
           </div>
@@ -808,13 +867,14 @@
       $(".bannerVector").slick({
         dots: false,
         infinite: false,
-        speed: 1000,
+        arrows: false,
+        speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         fade: true,
-        cssEase: "linear"
-        // autoplaySpeed: 2500
+        cssEase: "linear",
+        autoplaySpeed: 3500
       });
       $(".services").slick({
         dots: false,
