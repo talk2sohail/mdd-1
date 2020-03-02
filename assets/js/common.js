@@ -14,9 +14,20 @@
   }, 4000);
 })();
 //Sticky Header
-
 $(window).on("scroll load", function() {
   $(window).scrollTop() > $(".siteHeader").outerHeight()
     ? $(".siteHeader").addClass("sticky")
     : $(".siteHeader").removeClass("sticky");
+});
+//Login Signup Popup
+const signUpButton = document.getElementById("signUp");
+const signInButton = document.getElementById("signIn");
+const container = document.getElementById("container");
+
+signUpButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
 });
