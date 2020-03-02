@@ -989,6 +989,22 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 90px 0 40px;
   }
   .brandsList {
+    @include media-breakpoint-down(md) {
+      &:before {
+        content: "SCROLL \2192";
+        font-family: $prompt;
+        letter-spacing: 2px;
+        font-size: 12px;
+        color: #677180;
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: block;
+        width: max-content;
+      }
+    }
     ul {
       max-width: 95%;
       margin: 0 auto;
@@ -1000,6 +1016,8 @@ input[type="search"]::-webkit-search-cancel-button {
       padding: 0;
       @include media-breakpoint-down(md) {
         max-width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
       }
       li + li {
         padding-left: 15px;
@@ -1019,7 +1037,7 @@ input[type="search"]::-webkit-search-cancel-button {
         img {
           max-width: 100px;
           @include media-breakpoint-down(sm) {
-            max-width: 90px;
+            max-width: 84px;
           }
         }
       }
@@ -1279,3 +1297,4 @@ footer {
     }
   }
 }
+//++++login and signup popup++++//
