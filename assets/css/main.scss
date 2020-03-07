@@ -244,7 +244,8 @@ body {
   font-size: 16px;
 }
 body {
-  &.modal-open {
+  &.modal-open,
+  &.mobileMenuActive {
     height: 100vh;
   }
 }
@@ -442,6 +443,9 @@ input[type="search"]::-webkit-search-cancel-button {
     left: 0;
     width: 100%;
     z-index: 99;
+    @include media-breakpoint-down(md) {
+      padding: 10px 0;
+    }
   }
   .logoWrapper {
     @include media-breakpoint-down(md) {
@@ -493,8 +497,8 @@ input[type="search"]::-webkit-search-cancel-button {
       }
       .iconsItem {
         @include media-breakpoint-down(md) {
-          width: 24%;
-          flex-basis: 24%;
+          width: 25%;
+          flex-basis: 25%;
           margin: 0;
         }
         a {
@@ -1612,6 +1616,103 @@ footer {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+//++++Mobile Menu++++//
+.mobileMenuTrigger {
+  button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    .icon-bar {
+      background: rgba(86, 204, 242, 1);
+      background: linear-gradient(
+        -90deg,
+        rgba(47, 128, 237, 1),
+        rgba(86, 204, 242, 1)
+      );
+      height: 2px;
+      width: 30px;
+      padding: 0;
+      margin: 6px 0;
+      transition: all 0.2s;
+      display: block;
+      &.middle-bar {
+        width: 20px;
+        margin-right: auto;
+      }
+      &.bottom-bar {
+        width: 15px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+.mobileMenuWrapperOuter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  transition: all 0.2s ease-in-out 0s;
+  // backdrop-filter: saturate(180%) blur(20px);
+  &.on {
+    opacity: 1;
+    visibility: visible;
+  }
+  .mobileMenuWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    overflow-y: auto;
+    .mobileMenuCloseWrapper {
+      position: fixed;
+      top: 0%;
+      left: 64%;
+      font-size: 20px;
+      left: 64%;
+      z-index: 10;
+    }
+    .mobile-menu-wrapper-header {
+      background: #56ccf2;
+      background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+      padding: 14px 20px;
+      .mobile-menu-header-inner {
+        padding-left: 15px;
+        a,
+        span {
+          font-family: $comfor;
+          color: color(font-white);
+        }
+      }
+    }
+    .mobileMenu {
+      .borders {
+        border-bottom: 1px solid #67718042;
+        padding: 16px 20px;
+        a {
+          color: color(font-dark);
+          display: block;
+          font-family: $comfor;
+          margin-bottom: 20px;
+          letter-spacing: 1px;
+          font-weight: 300;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        &:last-child {
+          border-bottom: 0;
         }
       }
     }

@@ -31,7 +31,12 @@ signUpButton.addEventListener("click", () => {
 signInButton.addEventListener("click", () => {
   container.classList.remove("right-panel-active");
 });
-//Check orientation
-// if (window.innerWidth > window.innerHeight) {
-//   alert("Please use Potrait!");
-// }
+// mobile menu js
+$(".mobileMenuTrigger").click(function() {
+  $(".mobileMenuWrapperOuter").addClass("on");
+  $("body").addClass("mobileMenuActive");
+});
+$(".mobileMenuCloseWrapper").click(function() {
+  $(".mobileMenuWrapperOuter").removeClass("on");
+  $("body").removeClass("mobileMenuActive");
+});
