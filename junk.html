@@ -12,6 +12,25 @@
       );
     }
   }
+  #landscape-message {
+    display: none;
+  }
+  @media only screen and (max-width: 767.98px) and (orientation: landscape) {
+    #landscape-message {
+      display: block;
+    }
+    #site-wrapper {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 767.98px) and (orientation: portrait) {
+    #landscape-message {
+      display: none;
+    }
+    #site-wrapper {
+      display: block;
+    }
+  }
 </style>
 <!-- offers -->
 <section class="offersWrapper">
@@ -45,3 +64,37 @@
     </div>
   </div>
 </section>
+<!-- <div>
+        <svg
+          style="fill: #73b0ef8a;position: absolute;
+          z-index: -1;
+          top: 10px;"
+          id="svg-top"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          preserveAspectRatio="xMidYMid"
+          width="195.875"
+          height="1318.28"
+          viewBox="0 0 195.875 1318.28"
+        >
+          <defs>
+            <filter id="gradient-overlay-2" filterUnits="userSpaceOnUse">
+              <feImage
+                x="-829.406"
+                y="0"
+                width="1025.281"
+                height="1318.2800000000002"
+                preserveAspectRatio="none"
+                xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAyNS4yODEiIGhlaWdodD0iMTMxOC4yODAwMDAwMDAwMDAyIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB5MT0iMTQ2LjUiIHgyPSIxMDI1LjI4IiB5Mj0iMTE3MS43OCI+CiAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMWJkZDg4Ii8+CiAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMzJlYjlhIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="
+              ></feImage>
+              <feComposite operator="in" in2="SourceGraphic"></feComposite>
+              <feBlend in2="SourceGraphic" result="gradientFill"></feBlend>
+            </filter>
+          </defs>
+          <path
+            style="fill: #73b0ef8a"
+            d="M-540.968,20.684 C-540.968,20.684 -687.378,86.487 -694.760,174.843 C-702.142,263.200 -643.186,274.374 -667.132,338.769 C-691.079,403.164 -765.483,413.324 -785.981,496.763 C-807.750,585.376 -722.107,571.956 -727.171,690.819 C-732.235,809.683 -978.187,852.597 -688.556,1167.735 C-398.925,1482.874 -139.906,1235.432 -115.898,1040.448 C-91.891,845.463 42.695,803.563 95.851,754.793 C149.006,706.023 316.246,497.102 46.140,203.210 C-223.966,-90.683 -540.968,20.684 -540.968,20.684 Z"
+            class="cls-2"
+          ></path>
+        </svg>
+      </div> -->
