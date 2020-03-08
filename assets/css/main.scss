@@ -180,7 +180,34 @@ $comfor: Comfortaa, cursive;
     opacity: 0;
   }
 }
-
+@-webkit-keyframes styles__pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes styles__pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
 @keyframes show {
   0%,
   49.99% {
@@ -496,6 +523,7 @@ input[type="search"]::-webkit-search-cancel-button {
         }
       }
       .iconsItem {
+        position: relative;
         @include media-breakpoint-down(md) {
           width: 25%;
           flex-basis: 25%;
@@ -512,6 +540,140 @@ input[type="search"]::-webkit-search-cancel-button {
             @include media-breakpoint-down(md) {
               width: max-content;
               margin: 0 auto;
+            }
+          }
+        }
+        .circleWrapper {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: -25%;
+          right: -20%;
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            background-color: #ff6f61;
+            animation: styles__pulse 1.6s infinite;
+            will-change: transform, opacity;
+          }
+          &:after {
+            animation-delay: 0.2s;
+          }
+          .circle {
+            width: 100%;
+            height: 100%;
+            background-color: #ff6f61;
+            border-radius: 100%;
+          }
+        }
+        .subMenuTree {
+          display: block;
+          position: absolute;
+          top: 100%;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10%);
+          border-radius: 6px;
+          background-color: color(bgcolor);
+          box-shadow: 0px 20px 40px 0px rgba(171, 181, 189, 0.4);
+          top: 145%;
+          z-index: 1;
+          left: -125px;
+          min-width: 180px;
+          border-top: 2px solid #2f80ed;
+          transition: all 0.2s ease-in;
+          ul {
+            list-style: none;
+            padding: 0;
+
+            margin: 0;
+            li {
+              text-align: left;
+              a {
+                color: color(font-dark);
+                width: 100%;
+                padding: 12px 15px;
+                display: block;
+                font-family: $comfor;
+                letter-spacing: 0.5px;
+                font-size: 15px;
+                font-weight: 300;
+              }
+            }
+            li + li {
+              border-top: 1px solid #67718042;
+            }
+          }
+          .cartMenuDrop {
+            padding: 10px 12px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            .contentWrapper {
+              text-align: left;
+              h5 {
+                font-size: 15px;
+                letter-spacing: 1px;
+              }
+              p {
+                color: #677180;
+                font-size: 11px;
+                margin: 0;
+              }
+            }
+            .priceWrap {
+              max-width: 38%;
+              flex-basis: 38%;
+              p {
+                font-size: 15px;
+                font-family: $comfor;
+                margin: 0;
+              }
+            }
+            a {
+              background: rgba(86, 204, 242, 1); /* fallback for old browsers */
+              background: -webkit-linear-gradient(
+                -60deg,
+                rgba(47, 128, 237, 0.75),
+                rgba(86, 204, 242, 0.75)
+              );
+              background: linear-gradient(
+                -60deg,
+                rgba(47, 128, 237, 0.75),
+                rgba(86, 204, 242, 0.75)
+              );
+              text-align: center;
+              width: 100%;
+              margin: 0;
+            }
+          }
+          .cartMenuDrop + .cartMenuDrop {
+            border-top: 1px solid #67718042;
+          }
+          .totalPrice {
+            text-align: left;
+            p {
+              margin-bottom: 8px;
+            }
+          }
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+        &.hasItems {
+          &:hover {
+            .subMenuTree {
+              transform: translateY(-5%);
+              opacity: 1;
+              // transition: all 0.4s ease-in;
+              visibility: visible;
             }
           }
         }
