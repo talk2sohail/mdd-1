@@ -1875,6 +1875,41 @@ footer {
   }
 }
 //++++Repair Page++++//
+.searchBar {
+  input {
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0;
+    padding: 10px 45px 10px 19px;
+    width: 450px;
+    margin: 10px 0 0;
+    font-weight: 300;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+  }
+  button {
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0;
+    background: #56ccf2;
+    background: linear-gradient(
+      -60deg,
+      rgba(47, 128, 237, 1),
+      rgba(86, 204, 242, 1)
+    );
+    padding: 7px 7px;
+    position: relative;
+    top: 1px;
+    border-radius: 6px;
+    left: -45px;
+    img {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
 .repairBannerWrapper {
   background: rgba(86, 204, 242, 1); /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -1892,42 +1927,13 @@ footer {
   // clip-path: ellipse(100% 55% at 48% 44%);
   color: color(font-white);
   text-align: center;
-  form {
+  .searchBar {
     input {
-      outline: 0;
-      border: 0;
-      box-shadow: 0 0 0;
-      padding: 10px 45px 10px 19px;
       width: 450px;
-      margin: 10px 0 0;
-      font-weight: 300;
-      border-radius: 6px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
-    }
-    button {
-      border: 0;
-      outline: 0;
-      box-shadow: 0 0 0;
-      background: #56ccf2;
-      background: linear-gradient(
-        -60deg,
-        rgba(47, 128, 237, 1),
-        rgba(86, 204, 242, 1)
-      );
-      padding: 7px 7px;
-      position: relative;
-      top: 1px;
-      border-radius: 6px;
-      left: -45px;
-      img {
-        width: 20px;
-        height: 20px;
-        position: relative;
-        top: -2px;
-      }
     }
   }
 }
+
 .customerLogosWrapper {
   position: relative;
   top: -55px;
@@ -1942,6 +1948,9 @@ footer {
     position: relative;
     align-items: center;
     animation: float 7s ease-in-out infinite;
+    img {
+      height: 25px;
+    }
     &:first-child {
       animation-delay: 0s;
       top: -15px;
@@ -1972,6 +1981,66 @@ footer {
     &:last-child {
       top: -15px;
       animation-delay: 2s;
+    }
+  }
+}
+.repairSelection {
+  padding: 50px 0;
+  a {
+    border: 1px solid #67718042;
+    padding: 15px 0px;
+    display: block;
+    color: color(font-dark);
+    font-family: $comfor;
+    font-size: 18px;
+  }
+  .col-4 + .col-4 {
+    a {
+      border-left: 0;
+    }
+  }
+  .selectOption {
+    h2 {
+      font-size: 20px;
+      padding-left: 10px;
+    }
+    h3 {
+      font-size: 14px;
+      font-family: $comfor;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      display: none;
+      text-transform: uppercase;
+    }
+    padding: 20px 0 0;
+    form {
+      position: relative;
+      right: -5%;
+      input {
+        width: 300px;
+        padding: 12px 45px 12px 19px;
+        box-shadow: 0 0.19rem 0.38rem 0 rgba(41, 70, 97, 0.3);
+      }
+    }
+    .branWrap {
+      transform: scale(1, 1);
+      margin: 40px 12px 0;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0px 9px 18px 2px rgba(171, 181, 189, 0.4);
+      transition: all 0.4s ease;
+      padding: 10px 0;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05, 1.05);
+        transition: all 0.4s ease;
+        border-radius: 6px;
+      }
+      .imgWrapBrand {
+        img {
+          width: 80px;
+        }
+      }
     }
   }
 }
