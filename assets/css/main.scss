@@ -1993,6 +1993,12 @@ footer {
     color: color(font-dark);
     font-family: $comfor;
     font-size: 18px;
+    &.active {
+      background: #3ecf8e;
+      border: 1px solid #3ecf8e;
+      color: color(font-white);
+      box-shadow: 0px 9px 18px 2px rgba(171, 181, 189, 0.4);
+    }
   }
   .col-4 + .col-4 {
     a {
@@ -2009,7 +2015,7 @@ footer {
       font-family: $comfor;
       font-weight: 500;
       letter-spacing: 1.5px;
-      display: none;
+      // display: none;
       text-transform: uppercase;
     }
     padding: 20px 0 0;
@@ -2018,6 +2024,8 @@ footer {
       right: -5%;
       input {
         width: 300px;
+
+        background-color: color(font-white);
         padding: 12px 45px 12px 19px;
         box-shadow: 0 0.19rem 0.38rem 0 rgba(41, 70, 97, 0.3);
       }
@@ -2039,6 +2047,20 @@ footer {
       .imgWrapBrand {
         img {
           width: 80px;
+        }
+      }
+    }
+  }
+  .mobileSelect {
+    h3 {
+      margin: 15px 0 5px;
+      text-transform: capitalize;
+    }
+    .branWrap {
+      .imgWrapBrand {
+        img {
+          width: auto;
+          height: 110px;
         }
       }
     }
