@@ -253,15 +253,21 @@
             class="row no-gutters align-items-center justify-content-between"
           >
             <div class="col-4">
-              <a class="text-center active" href="javascript:void(0)"
+              <a
+                class="text-center progressBooking active"
+                href="javascript:void(0)"
                 >Brand (OnePlus)</a
               >
             </div>
             <div class="col-4">
-              <a class="text-center" href="javascript:void(0)">Mobile</a>
+              <a class="text-center progressBooking" href="javascript:void(0)"
+                >Mobile</a
+              >
             </div>
             <div class="col-4">
-              <a class="text-center" href="javascript:void(0)">Issue</a>
+              <a class="text-center progressBooking" href="javascript:void(0)"
+                >Issue</a
+              >
             </div>
           </div>
           <div
@@ -290,79 +296,89 @@
             <!-- oneplus six t-->
             <div class="col-6 col-md-4 col-lg-2">
               <div class="branWrap">
-                <div class="imgWrapBrand">
-                  <img
-                    src="assets/images/mobiles/oneplus/oneplussixt.png"
-                    class="d-block text-center mx-auto"
-                    alt=""
-                  />
+                <div class="imgWrapBrand slider slider-for">
+                  <div>
+                    <img
+                      src="assets/images/mobiles/oneplus/oneplussixt.png"
+                      class="d-block text-center mx-auto"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/images/mobiles/oneplus/oneplussixtbidnightblack.png"
+                      class="d-block text-center mx-auto"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="slider slider-nav colorSlider">
+                  <div>
+                    <div class="colorCode mirrorBlack"></div>
+                  </div>
+                  <div>
+                    <div class="colorCode midnightBlack"></div>
+                  </div>
                 </div>
                 <h3 class="text-center uppercase">OnePlus 6T</h3>
               </div>
             </div>
-            <!-- oneplus six -->
             <div class="col-6 col-md-4 col-lg-2">
               <div class="branWrap">
-                <div class="imgWrapBrand">
-                  <img
-                    src="assets/images/mobiles/oneplus/oneplussix.png"
-                    class="d-block text-center mx-auto"
-                    alt=""
-                  />
+                <div class="imgWrapBrand slider slider-for">
+                  <div>
+                    <img
+                      src="assets/images/mobiles/oneplus/oneplussixt.png"
+                      class="d-block text-center mx-auto"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/images/mobiles/oneplus/oneplussixtbidnightblack.png"
+                      class="d-block text-center mx-auto"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <h3 class="text-center uppercase">OnePlus 6</h3>
+                <div class="slider slider-nav colorSlider">
+                  <div>
+                    <div class="colorCode mirrorBlack"></div>
+                  </div>
+                  <div>
+                    <div class="colorCode midnightBlack"></div>
+                  </div>
+                </div>
+                <h3 class="text-center uppercase">OnePlus 6T</h3>
               </div>
             </div>
-            <!-- oneplus fiveT -->
             <div class="col-6 col-md-4 col-lg-2">
               <div class="branWrap">
-                <div class="imgWrapBrand">
-                  <img
-                    src="assets/images/mobiles/oneplus/oneplusfiveT.png"
-                    class="d-block text-center mx-auto"
-                    alt=""
-                  />
+                <div class="imgWrapBrand slider slider-for">
+                  <div>
+                    <img
+                      src="assets/images/mobiles/oneplus/oneplussixt.png"
+                      class="d-block text-center mx-auto"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="assets/images/mobiles/oneplus/oneplussixtbidnightblack.png"
+                      class="d-block text-center mx-auto"
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <h3 class="text-center uppercase">OnePlus 5T</h3>
-              </div>
-            </div>
-            <!-- oneplus five -->
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="branWrap">
-                <div class="imgWrapBrand">
-                  <img
-                    src="assets/images/mobiles/oneplus/oneplusfive.png"
-                    class="d-block text-center mx-auto"
-                    alt=""
-                  />
+                <div class="slider slider-nav colorSlider">
+                  <div>
+                    <div class="colorCode mirrorBlack"></div>
+                  </div>
+                  <div>
+                    <div class="colorCode midnightBlack"></div>
+                  </div>
                 </div>
-                <h3 class="text-center uppercase">OnePlus 5</h3>
-              </div>
-            </div>
-            <!-- oneplus threet -->
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="branWrap">
-                <div class="imgWrapBrand">
-                  <img
-                    src="assets/images/mobiles/oneplus/oneplusthreeT.png"
-                    class="d-block text-center mx-auto"
-                    alt=""
-                  />
-                </div>
-                <h3 class="text-center uppercase">OnePlus 3T</h3>
-              </div>
-            </div>
-            <!-- oneplus three -->
-            <div class="col-6 col-md-4 col-lg-2">
-              <div class="branWrap">
-                <div class="imgWrapBrand">
-                  <img
-                    src="assets/images/mobiles/oneplus/oneplusthree.jpg"
-                    class="d-block text-center mx-auto"
-                    alt=""
-                  />
-                </div>
-                <h3 class="text-center uppercase">OnePlus 3</h3>
+                <h3 class="text-center uppercase">OnePlus 6T</h3>
               </div>
             </div>
           </div>
@@ -826,6 +842,21 @@
             }
           }
         ]
+      });
+      $(".slider-for").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".slider-nav"
+      });
+      $(".slider-nav").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: ".slider-for",
+        dots: true,
+        centerMode: false,
+        focusOnSelect: true
       });
     </script>
   </body>

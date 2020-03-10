@@ -1986,7 +1986,7 @@ footer {
 }
 .repairSelection {
   padding: 50px 0;
-  a {
+  .progressBooking {
     border: 1px solid #67718042;
     padding: 15px 0px;
     display: block;
@@ -2006,6 +2006,24 @@ footer {
     }
   }
   .selectOption {
+    .buttons {
+      a {
+        padding: 15px 20px;
+        margin-right: 5px;
+        background: rgba(86, 204, 242, 1); /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          -60deg,
+          rgba(47, 128, 237, 0.75),
+          rgba(86, 204, 242, 0.75)
+        );
+        background: linear-gradient(
+          -60deg,
+          rgba(47, 128, 237, 0.75),
+          rgba(86, 204, 242, 0.75)
+        );
+        border-color: rgba(86, 204, 242, 1);
+      }
+    }
     h2 {
       font-size: 20px;
       padding-left: 10px;
@@ -2053,14 +2071,53 @@ footer {
   }
   .mobileSelect {
     h3 {
-      margin: 15px 0 5px;
+      margin: 8px 0 0px;
       text-transform: capitalize;
     }
     .branWrap {
+      padding: 15px 0;
       .imgWrapBrand {
         img {
           width: auto;
           height: 120px;
+        }
+      }
+      .colorSlider {
+        margin: 8px 0 0;
+        .slick-list {
+          padding: 0 !important;
+          margin: 0 auto;
+          .slick-track {
+            width: max-content !important;
+            transform: translate3d(0, 0, 0) !important;
+            .slick-slide {
+              width: 18px !important;
+              transform: scale(0.8, 0.8);
+              border: 0;
+              outline: none;
+              &.slick-current {
+                transform: scale(1.05, 1.05);
+              }
+              .colorCode {
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                background: #000;
+                border: 1px solid #000;
+                &.mirrorBlack {
+                  background: #d4e1ec;
+                  border: 1px solid #d4e1ec;
+                }
+                &.midnightBlack {
+                  background: #000316;
+                  border: 1px solid #000316;
+                }
+              }
+            }
+            .slick-slide + .slick-slide {
+              margin-left: 8px;
+            }
+          }
         }
       }
     }
@@ -2104,6 +2161,7 @@ footer {
             rgba(47, 128, 237, 0.75),
             rgba(86, 204, 242, 0.75)
           );
+          border-color: rgba(86, 204, 242, 1);
         }
       }
       .iconWrap {
@@ -2146,12 +2204,28 @@ footer {
         text-align: center;
         padding: 10px 0;
         border-width: 1px 0 0 0;
+        color: color(font-dark);
+        background: color(bgcolor);
+        span {
+          &:last-child {
+            display: none;
+          }
+        }
         &.remove {
+          border-color: #ea425c;
           background: #ea425c;
           color: color(font-white);
           svg {
             position: relative;
             top: -1px;
+          }
+          span {
+            &:first-child {
+              display: none;
+            }
+            &:last-child {
+              display: block;
+            }
           }
         }
       }
