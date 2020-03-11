@@ -97,7 +97,8 @@ $colors: (
   bgcolor: #f9f9f9,
   primary: #007fff,
   font-dark: #1b1b1b,
-  red-delete: #ea425c
+  red-delete: #ea425c,
+  success-green: #3ecf8e
 );
 @function color($color-name) {
   @return map-get($colors, $color-name);
@@ -2007,8 +2008,8 @@ footer {
     font-family: $comfor;
     font-size: 18px;
     &.active {
-      background: #3ecf8e;
-      border: 1px solid #3ecf8e;
+      background: color(success-green);
+      border: 1px solid color(success-green);
       color: color(font-white);
       box-shadow: 0px 9px 18px 2px rgba(171, 181, 189, 0.4);
     }
@@ -2427,6 +2428,88 @@ footer {
             margin: 0 0 20px;
             .editProfileDetails {
               width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .typesofAppointments {
+      margin: 0 0 25px;
+      a + a {
+        margin-left: 10px;
+      }
+      a {
+        width: max-content;
+        background: #6b7d851c;
+        color: color(font-dark);
+        font-weight: 300;
+        text-align: center;
+        padding: 6px 15px;
+        border-radius: 20px;
+        &.active,
+        &:hover {
+          background: #56ccf2;
+          background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+          color: color(font-white);
+        }
+      }
+    }
+    .orderBlock + .orderBlock {
+      margin: 20px 0 0;
+    }
+    .orderBlock {
+      border: 1px solid #67718029;
+      .orderHeader {
+        padding: 18px 20px;
+        border-bottom: 1px solid #67718029;
+        p,
+        span,
+        a {
+          margin: 0;
+          font-size: 15px;
+          font-weight: 300;
+          letter-spacing: 1px;
+          color: color(font-dark);
+          span {
+            opacity: 0.6;
+            font-weight: 400;
+          }
+        }
+        .orderStatus {
+          padding: 6px 15px;
+          border-radius: 20px;
+          font-size: 14px;
+          &.repairing {
+            background: #f47679;
+            color: color(font-white);
+          }
+        }
+      }
+      .orderBody {
+        padding: 18px 20px;
+        .imgWrap {
+          max-width: 11%;
+          flex-basis: 11%;
+          img {
+            width: auto;
+            height: 120px;
+          }
+        }
+        .contentWrap {
+          max-width: 32%;
+          flex-basis: 32%;
+          p {
+            margin: 0 0 2px;
+
+            font-weight: 300;
+            span {
+              opacity: 0.7;
+              font-weight: 400;
+            }
+            &.price {
+              opacity: 1;
+              font-weight: 400;
+              letter-spacing: 1.5px;
             }
           }
         }
