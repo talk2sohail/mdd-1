@@ -2579,5 +2579,126 @@ footer {
         }
       }
     }
+    .orderSummary {
+      border: 1px solid #67718029;
+      padding: 18px 20px;
+      .summaryBlock + .summaryBlock {
+        padding-left: 10px;
+      }
+      .summaryBlock {
+        max-width: 33.33%;
+        flex-basis: 33.33%;
+        h3 {
+          font-weight: 400;
+          letter-spacing: 1px;
+        }
+        p {
+          font-weight: 300;
+          margin: 0 0 2px;
+          span {
+            font-weight: 400;
+          }
+        }
+        &.pricing {
+          p {
+            span {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    .orderStatus {
+      margin: 25px 0 0;
+      border: 1px solid #67718029;
+      padding: 18px 20px;
+      .imgWrap {
+        max-width: 11%;
+        flex-basis: 11%;
+        img {
+          width: auto;
+          height: 120px;
+        }
+      }
+      .contentWrap {
+        max-width: 32%;
+        flex-basis: 32%;
+        h3 {
+          font-weight: 400;
+        }
+        p {
+          margin: 0 0 2px;
+          font-weight: 300;
+          span {
+            opacity: 0.7;
+            font-weight: 400;
+          }
+        }
+      }
+      .status {
+        max-width: 57%;
+        flex-basis: 57%;
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 0 0 45px;
+          li {
+            max-width: 25%;
+            flex-basis: 25%;
+            width: 100%;
+            display: block;
+            height: 2px;
+            p {
+              font-size: 10px;
+              text-align: center;
+              margin: 0;
+            }
+            .circleOuter {
+              border-radius: 100%;
+              width: 20px;
+              height: 20px;
+              top: -9px;
+
+              background: color(font-white);
+
+              padding: 3px;
+              span {
+                border-radius: 100%;
+                width: 12px;
+                background: #67718029;
+                height: 12px;
+                display: block;
+                margin: 0 auto;
+              }
+            }
+            &.completed {
+              background: color(success-green);
+              .circleOuter {
+                border: 1px solid color(success-green);
+                span {
+                  background: color(success-green);
+                }
+              }
+            }
+            &.todo {
+              background: #67718029;
+              .circleOuter {
+                border: 1px solid #67718029;
+                span {
+                  background: #67718029;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
+}
+//++++checkout page++++//
+.checkoutWrapper {
+  background: color(bgcolor);
+  padding: 50px 0;
 }
