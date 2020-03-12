@@ -2701,4 +2701,59 @@ footer {
 .checkoutWrapper {
   background: color(bgcolor);
   padding: 50px 0;
+  .userWrapper {
+    .orderBlock {
+      .orderBody {
+        .imgWrap {
+          max-width: 12%;
+          flex-basis: 12%;
+          img {
+            height: 110px;
+          }
+        }
+        .contentWrap {
+          max-width: 60%;
+          flex-basis: 60%;
+        }
+      }
+    }
+  }
+  .priceSummary {
+    background: color(font-white);
+    padding: 28px 30px;
+    .priceHeader {
+      border-bottom: 1px solid #67718029;
+      margin: 0 0 15px;
+      padding: 0 0 15px;
+      h3 {
+        font-size: 20px;
+        margin: 0;
+        letter-spacing: 1px;
+      }
+    }
+    .priceBody {
+      .price {
+        font-weight: 300;
+        margin: 0 0 15px;
+        span {
+          font-weight: 400;
+        }
+        &.borderB {
+          border-bottom: 1px dotted #677180db;
+          padding: 0 0 16px;
+        }
+      }
+      .tax {
+        margin: 0 0 15px;
+      }
+      .total {
+        border-top: 1px solid #67718029;
+        margin: 0;
+        padding: 16px 0 0;
+        span {
+          color: color(success-green);
+        }
+      }
+    }
+  }
 }
