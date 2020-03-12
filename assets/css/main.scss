@@ -2459,7 +2459,8 @@ footer {
     }
     .orderBlock {
       border: 1px solid #67718029;
-      .orderHeader {
+      .orderHeader,
+      .orderFoooter {
         padding: 18px 20px;
         border-bottom: 1px solid #67718029;
         p,
@@ -2479,14 +2480,27 @@ footer {
           padding: 6px 15px;
           border-radius: 20px;
           font-size: 14px;
+          color: color(font-white);
           &.repairing {
             background: #f47679;
-            color: color(font-white);
+          }
+          &.revision {
+            background: #fa9f2e;
+          }
+          &.completed {
+            background: color(success-green);
+          }
+          &.cancelled {
+            background: color(red-delete);
           }
         }
       }
+      .orderFoooter {
+        border: 0;
+      }
       .orderBody {
         padding: 18px 20px;
+        border-bottom: 1px solid #67718029;
         .imgWrap {
           max-width: 11%;
           flex-basis: 11%;
@@ -2498,6 +2512,9 @@ footer {
         .contentWrap {
           max-width: 32%;
           flex-basis: 32%;
+          h3 {
+            font-weight: 400;
+          }
           p {
             margin: 0 0 2px;
 
@@ -2510,6 +2527,53 @@ footer {
               opacity: 1;
               font-weight: 400;
               letter-spacing: 1.5px;
+            }
+          }
+        }
+        .contentWrapTwo {
+          max-width: 45%;
+          flex-basis: 45%;
+          margin-left: auto;
+          h3 {
+            font-size: 16px;
+            text-align: right;
+            position: relative;
+            margin-left: auto;
+            span {
+              width: 10px;
+              height: 10px;
+              display: inline-block;
+              border-radius: 100%;
+              &.underRepair {
+                background: #f47679;
+              }
+              &.repairCompleted {
+                background: color(success-green);
+              }
+              &.cancelled {
+                background: color(red-delete);
+              }
+              &.revision {
+                background: #fa9f2e;
+              }
+            }
+          }
+          p {
+            width: max-content;
+            margin-left: auto;
+            font-weight: 300;
+            font-size: 15px;
+            opacity: 0.7;
+            margin-bottom: 0px;
+          }
+          .buttons {
+            margin: 15px 0 0;
+            a {
+              margin-left: auto;
+              margin-right: 0;
+              font-size: 12px;
+              display: block;
+              width: max-content;
             }
           }
         }
