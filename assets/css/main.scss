@@ -237,6 +237,7 @@ $comfor: Comfortaa, cursive;
     box-shadow: 0 0.19rem 0.38rem 0 rgba(41, 70, 97, 0.3);
   }
 }
+
 //+++++Checking orientation of screen++++//
 #landscape-message {
   display: none;
@@ -335,6 +336,105 @@ input[type="search"]::-webkit-search-cancel-button {
 select {
   -webkit-appearance: none;
   appearance: none;
+}
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  & + label {
+    display: flex;
+    align-items: center;
+    &:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background: color(bgcolor);
+      border: 1px solid darken(color(bgcolor), 25%);
+      cursor: pointer;
+      transition: 0.3s ease;
+      border-radius: 4px;
+    }
+    .tick {
+      position: absolute;
+      stroke: color(font-white);
+      stroke-width: 2px;
+      stroke-dasharray: 17px;
+      stroke-dashoffset: 17px;
+      transition: 0.2s 0.1s ease;
+      cursor: pointer;
+    }
+  }
+  &:checked {
+    & + label {
+      &::before {
+        background: #56ccf2;
+        background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+      }
+      .tick {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+  &:focus {
+    & + label {
+      &:before {
+        border-color: none;
+        outline: none;
+      }
+    }
+  }
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: color(font-dark);
+  font-weight: 300;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid darken(color(bgcolor), 15%);
+  border-radius: 100%;
+  background: color(font-white);
+}
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #56ccf2;
+  background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+input[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 .title {
   margin: 0 0 30px;
@@ -2754,6 +2854,38 @@ footer {
           color: color(success-green);
         }
       }
+      form {
+        margin: 20px 0;
+        p {
+          margin: 0 0 10px;
+        }
+      }
+      .agreeTC {
+        font-weight: 300;
+        a {
+          color: color(font-dark);
+          padding-left: 6px;
+        }
+      }
+    }
+    .btnBook {
+      background: #56ccf2;
+      background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+      color: color(font-white);
+      padding: 10px 0;
+      border-radius: 4px;
+      margin: 20px 0 0;
+      letter-spacing: 1px;
+    }
+  }
+  .couponCode {
+    margin: 25px 0 0;
+    .btnSub {
+      background: #56ccf2;
+      background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+      color: color(font-white);
+      letter-spacing: 1px;
+      font-size: 15px;
     }
   }
 }

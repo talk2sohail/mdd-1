@@ -210,8 +210,56 @@
                   <p class="total">
                     Amount Payable <span class="float-right">Rs 1399</span>
                   </p>
-                  <form></form>
+                  <form>
+                    <p>Payment Type</p>
+                    <div>
+                      <input type="radio" id="test1" name="radio-group" />
+                      <label for="test1">Cash</label>
+
+                      <input type="radio" id="test2" name="radio-group" />
+                      <label for="test2" class="ml-3">Card</label>
+                    </div>
+                  </form>
+                  <div class="position-relative agreeTC">
+                    <input type="checkbox" checked id="agree" name="" />
+                    <label for="agree">
+                      <svg
+                        class="tick"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 13L6 14L7 15L8 16L9 17L11 15L12 14L13 13L14 12L15 11L16 10L17 9L18 8"
+                        />
+                      </svg>
+                      I agree to the
+                      <a href="javascript:void(0)"> Terms & Conditions</a>
+                    </label>
+                  </div>
                 </div>
+                <a href="javascript:void(0)" class="d-block text-center btnBook"
+                  >BOOK NOW</a
+                >
+              </div>
+              <div class="priceSummary couponCode">
+                <div class="priceHeader">
+                  <h3>Price Summary</h3>
+                </div>
+                <form class="row no-gutters">
+                  <div class="col-9">
+                    <input
+                      class="mb-0"
+                      type="text"
+                      placeholder="Enter Coupon Code"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <input class="mb-0 btnSub" type="submit" value="APPLY" />
+                  </div>
+                </form>
               </div>
             </div>
           </div>
