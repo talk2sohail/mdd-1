@@ -2889,3 +2889,79 @@ footer {
     }
   }
 }
+//++++faq page++++//
+.supportPageBanner {
+  padding: 50px 0;
+  position: relative;
+  background: darken(color(bgcolor), 5%); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ffffff,
+    darken(color(bgcolor), 5%)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ffffff,
+    darken(color(bgcolor), 5%)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  svg {
+    height: 600px;
+  }
+  .contentWrap {
+    h1 {
+      font-size: 35px;
+      letter-spacing: 1px;
+      line-height: 49px;
+      margin: 0 0 15px;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+}
+.faqsWrap {
+  padding: 25px 0 80px;
+  .card {
+    border: 0 !important;
+    box-shadow: 0 0 20px 0 rgba(6, 30, 37, 0.1);
+    border-radius: 12px !important;
+    .card-header {
+      padding: 0;
+      .btn {
+        text-decoration: none;
+        color: color(font-dark);
+        letter-spacing: 1px;
+        padding: 20px 25px;
+      }
+    }
+    .card-body {
+      padding: 5px 30px 30px;
+    }
+  }
+  .card + .card {
+    margin-top: 30px;
+  }
+
+  .collapsible-link::before {
+    content: "";
+    background-size: cover;
+    background-position: center;
+    background: url(../images/icons/arrowDown.png);
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%) scale(0.4);
+    display: block;
+  }
+
+  .collapsible-link[aria-expanded="true"]::before {
+    content: "";
+    background-size: cover;
+    background-position: center;
+    background: url(../images/icons/lessthan.png);
+    transform: translateY(-50%) scale(0.4) rotate(90deg);
+  }
+}
