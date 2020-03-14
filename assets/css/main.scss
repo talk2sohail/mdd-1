@@ -2965,3 +2965,50 @@ footer {
     transform: translateY(-50%) scale(0.4) rotate(90deg);
   }
 }
+//++++about page++++//
+.aboutBannerWrap {
+  position: relative;
+  background: #56ccf2;
+  background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+  .content {
+    color: color(font-white);
+    padding: 0 115px 0 65px;
+    h1 {
+      font-size: 43px;
+      margin-bottom: 10px;
+      line-height: 60px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 68%;
+  }
+  .floatingCont {
+    background: color(font-white);
+    //#ffffffd9
+    position: absolute;
+    width: 550px;
+    right: 18%;
+    box-shadow: 0px 3px 20px 20px rgba(0, 0, 0, 0.13);
+    bottom: -10%;
+    padding: 33px;
+  }
+}
+.ourStoryWrap {
+  padding: 100px 0 80px;
+  h2 {
+    font-size: 40px;
+    margin: 0 0 15px;
+  }
+  p {
+    margin: 0 0 15px;
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
