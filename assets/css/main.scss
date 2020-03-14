@@ -2804,6 +2804,8 @@ footer {
   .userWrapper {
     .orderBlock {
       .orderBody {
+        border-bottom: 0;
+
         .imgWrap {
           max-width: 12%;
           flex-basis: 12%;
@@ -2886,6 +2888,21 @@ footer {
       color: color(font-white);
       letter-spacing: 1px;
       font-size: 15px;
+    }
+  }
+  .nav-tabs {
+    border: 0;
+    .nav-link {
+      border: 1px solid #67718029;
+      padding: 6px 15px;
+      border-radius: 20px;
+      color: color(font-dark);
+      &.active {
+        background: #56ccf2;
+        border: 1px solid #56ccf2;
+        background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+        color: color(font-white);
+      }
     }
   }
 }
@@ -3010,5 +3027,23 @@ footer {
     margin: 0 0 15px;
     font-size: 17px;
     line-height: 28px;
+  }
+}
+//++++policies++++//
+.policyWrap {
+  background: #56ccf2;
+  background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+  padding: 45px 0;
+  color: color(font-white);
+}
+.policiesContent {
+  padding: 60px 0;
+  h2 {
+    font-size: 20px;
+    margin: 30px 0 20px;
+  }
+  p {
+    font-weight: 300;
+    letter-spacing: 0.8px;
   }
 }
