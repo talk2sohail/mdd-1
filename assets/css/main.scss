@@ -308,7 +308,7 @@ a {
   }
 }
 .sectionWrapper {
-  max-width: 1280px;
+  max-width: 1250px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -1371,7 +1371,7 @@ input[type="radio"]:checked + label:after {
       }
     }
     ul {
-      max-width: 95%;
+      // max-width: 95%;
       margin: 0 auto;
       display: flex;
       list-style: none;
@@ -1388,6 +1388,7 @@ input[type="radio"]:checked + label:after {
         padding-left: 15px;
       }
       li {
+        text-align: center;
         max-width: 14.28%;
         flex-basis: 14.28%;
         @include media-breakpoint-down(md) {
@@ -2185,7 +2186,7 @@ footer {
   }
   .mobileSelect {
     h3 {
-      margin: 8px 0 0px;
+      margin: 15px 0 0px;
       text-transform: capitalize;
     }
     .branWrap {
@@ -2194,44 +2195,6 @@ footer {
         img {
           width: auto;
           height: 120px;
-        }
-      }
-      .colorSlider {
-        margin: 8px 0 0;
-        .slick-list {
-          padding: 0 !important;
-          margin: 0 auto;
-          .slick-track {
-            width: max-content !important;
-            transform: translate3d(0, 0, 0) !important;
-            .slick-slide {
-              width: 18px !important;
-              transform: scale(0.8, 0.8);
-              border: 0;
-              outline: none;
-              &.slick-current {
-                transform: scale(1.05, 1.05);
-              }
-              .colorCode {
-                width: 15px;
-                height: 15px;
-                border-radius: 100%;
-                background: #000;
-                border: 1px solid #000;
-                &.mirrorBlack {
-                  background: #d4e1ec;
-                  border: 1px solid #d4e1ec;
-                }
-                &.midnightBlack {
-                  background: #000316;
-                  border: 1px solid #000316;
-                }
-              }
-            }
-            .slick-slide + .slick-slide {
-              margin-left: 8px;
-            }
-          }
         }
       }
     }
@@ -2392,6 +2355,9 @@ footer {
   .userWrapper {
     background: color(font-white);
     padding: 28px 30px;
+    @include media-breakpoint-down(sm) {
+      padding: 28px 18px;
+    }
     .userHeader {
       display: flex;
       align-items: center;
@@ -2400,10 +2366,17 @@ footer {
       border-bottom: 1px solid #67718029;
       padding: 0 10px 15px;
       margin: 0 0 20px;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0 0 15px;
+      }
       h2 {
         font-size: 20px;
         margin: 0;
         letter-spacing: 1px;
+        @include media-breakpoint-down(sm) {
+          font-size: 18px;
+        }
       }
       a {
         background: #56ccf2;
@@ -2420,6 +2393,9 @@ footer {
     }
     .userDetails {
       padding: 0 12px;
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
       .formGroup {
         margin: 0 0 25px;
         &:last-child {
@@ -2529,10 +2505,16 @@ footer {
             .editProfileDetails {
               width: 97%;
               display: block;
+              @include media-breakpoint-down(md) {
+                width: 100%;
+              }
             }
             .col-lg-6 + .col-lg-6 {
               .editProfileDetails {
                 margin-left: auto !important;
+                @include media-breakpoint-down(md) {
+                  margin: 20px 0 0;
+                }
               }
             }
           }
@@ -2606,18 +2588,29 @@ footer {
       }
       .orderBody {
         padding: 18px 20px;
-        border-bottom: 1px solid #67718029;
+        border-bottom: 1px solid #8995a729;
         .imgWrap {
           max-width: 11%;
           flex-basis: 11%;
+          @include media-breakpoint-down(sm) {
+            max-width: 27%;
+            flex-basis: 27%;
+          }
           img {
             width: auto;
             height: 120px;
+            @include media-breakpoint-down(sm) {
+              height: 88px;
+            }
           }
         }
         .contentWrap {
           max-width: 32%;
           flex-basis: 32%;
+          @include media-breakpoint-down(sm) {
+            max-width: 73%;
+            flex-basis: 73%;
+          }
           h3 {
             font-weight: 400;
           }
@@ -2815,13 +2808,25 @@ footer {
         .imgWrap {
           max-width: 12%;
           flex-basis: 12%;
+          @include media-breakpoint-down(sm) {
+            max-width: 27%;
+            flex-basis: 27%;
+          }
           img {
             height: 110px;
+            @include media-breakpoint-down(sm) {
+              height: 88px;
+            }
           }
         }
         .contentWrap {
           max-width: 60%;
           flex-basis: 60%;
+
+          @include media-breakpoint-down(sm) {
+            max-width: 73%;
+            flex-basis: 73%;
+          }
         }
       }
     }
@@ -2829,6 +2834,12 @@ footer {
   .priceSummary {
     background: color(font-white);
     padding: 28px 30px;
+    @include media-breakpoint-down(md) {
+      margin-top: 24px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 28px 18px;
+    }
     .priceHeader {
       border-bottom: 1px solid #67718029;
       margin: 0 0 15px;
@@ -2837,6 +2848,9 @@ footer {
         font-size: 20px;
         margin: 0;
         letter-spacing: 1px;
+        @include media-breakpoint-down(sm) {
+          font-size: 18px;
+        }
       }
     }
     .priceBody {
@@ -2870,6 +2884,9 @@ footer {
       }
       .agreeTC {
         font-weight: 300;
+        @include breakpoint(xlr) {
+          font-size: 13px;
+        }
         a {
           color: color(font-dark);
           padding-left: 6px;
@@ -2894,6 +2911,15 @@ footer {
       color: color(font-white);
       letter-spacing: 1px;
       font-size: 15px;
+      @include breakpoint(xlr) {
+        padding: 16px 0;
+        font-size: 11px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 12px 0;
+      }
     }
   }
   .nav-tabs {
@@ -2903,6 +2929,9 @@ footer {
       padding: 6px 15px;
       border-radius: 20px;
       color: color(font-dark);
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+      }
       &.active {
         background: #56ccf2;
         border: 1px solid #56ccf2;
@@ -2996,10 +3025,17 @@ footer {
   .content {
     color: color(font-white);
     padding: 0 115px 0 65px;
+    @include media-breakpoint-down(md) {
+      padding: 30px 20px;
+    }
     h1 {
       font-size: 43px;
       margin-bottom: 10px;
       line-height: 60px;
+      @include media-breakpoint-down(sm) {
+        font-size: 32px;
+        line-height: 45px;
+      }
     }
     p {
       font-size: 18px;
@@ -3011,6 +3047,10 @@ footer {
     width: 100%;
     object-fit: cover;
     object-position: center 68%;
+    @include media-breakpoint-down(md) {
+      height: 400px;
+      object-position: center 57%;
+    }
   }
   .floatingCont {
     background: color(font-white);
@@ -3021,10 +3061,25 @@ footer {
     box-shadow: 0px 3px 20px 20px rgba(0, 0, 0, 0.13);
     bottom: -10%;
     padding: 33px;
+    @include breakpoint(xlr) {
+      width: 456px;
+      right: 15%;
+    }
+    @include media-breakpoint-down(md) {
+      position: relative;
+      right: 0;
+      width: 100%;
+      box-shadow: 0 0 0;
+      bottom: 0;
+      padding: 25px 20px;
+    }
   }
 }
 .ourStoryWrap {
   padding: 100px 0 80px;
+  @include media-breakpoint-down(md) {
+    padding: 60px 0;
+  }
   h2 {
     font-size: 40px;
     margin: 0 0 15px;
