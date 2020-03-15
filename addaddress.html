@@ -200,7 +200,7 @@
                 <div class="userDetails addressChange">
                   <form>
                     <div
-                      class="formGroup align-items-center row justify-content-between"
+                      class="formGroup no-gutters align-items-center row justify-content-between"
                     >
                       <div class="col-lg-6">
                         <input
@@ -220,7 +220,7 @@
                       </div>
                     </div>
                     <div
-                      class="formGroup align-items-center row justify-content-between"
+                      class="formGroup no-gutters align-items-center row justify-content-between"
                     >
                       <div class="col-lg-6">
                         <input
@@ -242,7 +242,7 @@
                       </div>
                     </div>
                     <div
-                      class="formGroup align-items-center row justify-content-start"
+                      class="formGroup no-gutters align-items-center row justify-content-start"
                     >
                       <div class="col-12">
                         <textarea
@@ -256,27 +256,29 @@
                       </div>
                     </div>
                     <div
-                      class="formGroup align-items-center row  justify-content-between"
+                      class="formGroup no-gutters align-items-center row  justify-content-between"
                     >
                       <div class="col-lg-6">
                         <input
                           type="text"
                           class="editProfileDetails"
                           value=""
-                          placeholder="Pincode"
+                          pattern="[0-9]{1}[0-9]{9}"
+                          maxlength="10"
+                          placeholder="Phone Number"
                         />
                       </div>
                       <div class="col-lg-6">
                         <input
-                          type="text"
+                          type="email"
                           class="editProfileDetails"
                           value=""
-                          placeholder="Locality"
+                          placeholder="Email Address"
                         />
                       </div>
                     </div>
                     <div
-                      class="formGroup align-items-center row justify-content-between"
+                      class="formGroup no-gutters align-items-center row justify-content-between"
                     >
                       <div class="col-12">
                         <input

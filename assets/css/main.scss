@@ -2527,7 +2527,13 @@ footer {
           .formGroup {
             margin: 0 0 20px;
             .editProfileDetails {
-              width: 100%;
+              width: 97%;
+              display: block;
+            }
+            .col-lg-6 + .col-lg-6 {
+              .editProfileDetails {
+                margin-left: auto !important;
+              }
             }
           }
         }

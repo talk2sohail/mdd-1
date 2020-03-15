@@ -211,7 +211,7 @@
                           role="tab"
                           aria-controls="home"
                           aria-selected="true"
-                          >Home</a
+                          >Pickup</a
                         >
                       </li>
                       <li class="nav-item ml-3">
@@ -223,7 +223,7 @@
                           role="tab"
                           aria-controls="profile"
                           aria-selected="false"
-                          >Profile</a
+                          >Drop</a
                         >
                       </li>
                     </ul>
@@ -274,7 +274,7 @@
                             <div class="col-lg-6">
                               <input
                                 type="text"
-                                class="editProfileDetails ml-4"
+                                class="editProfileDetails"
                                 value=""
                                 placeholder="Last Name"
                               />
@@ -296,7 +296,7 @@
                             <div class="col-lg-6">
                               <input
                                 type="text"
-                                class="editProfileDetails ml-4"
+                                class="editProfileDetails"
                                 value=""
                                 placeholder="Locality"
                               />
@@ -324,13 +324,15 @@
                                 type="text"
                                 class="editProfileDetails"
                                 value=""
+                                pattern="[0-9]{1}[0-9]{9}"
+                                maxlength="10"
                                 placeholder="Phone Number"
                               />
                             </div>
                             <div class="col-lg-6">
                               <input
                                 type="email"
-                                class="editProfileDetails ml-4"
+                                class="editProfileDetails"
                                 value=""
                                 placeholder="Email Address"
                               />
