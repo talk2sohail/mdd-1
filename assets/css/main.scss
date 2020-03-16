@@ -872,43 +872,44 @@ input[type="radio"]:checked + label:after {
   }
 }
 //++++Banner++++//
+.slick-dots {
+  bottom: 22px;
+  li {
+    margin: 0;
+    width: 8px;
+    height: 8px;
+    button {
+      padding: 0;
+      &:before {
+        content: " ";
+        background: color(font-white);
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+      }
+    }
+    &.slick-active {
+      width: 22px;
+      position: relative;
+      top: 2px;
+      button {
+        &:before {
+          width: 22px;
+          height: 4px;
+          border-radius: 38px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  li + li {
+    margin-left: 10px;
+  }
+}
 .bannerWrapper {
   .bannerSingle {
     margin: 0;
-    .slick-dots {
-      bottom: 22px;
-      li {
-        margin: 0;
-        width: 8px;
-        height: 8px;
-        button {
-          padding: 0;
-          &:before {
-            content: " ";
-            background: color(font-white);
-            width: 8px;
-            height: 8px;
-            border-radius: 100%;
-          }
-        }
-        &.slick-active {
-          width: 22px;
-          position: relative;
-          top: 2px;
-          button {
-            &:before {
-              width: 22px;
-              height: 4px;
-              border-radius: 38px;
-              opacity: 1;
-            }
-          }
-        }
-      }
-      li + li {
-        margin-left: 10px;
-      }
-    }
+
     .bannerItem {
       img {
         height: 400px;
@@ -3287,47 +3288,117 @@ footer {
 }
 .faqsWrap {
   padding: 25px 0 80px;
-  .card {
-    border: 0 !important;
-    box-shadow: 0 0 20px 0 rgba(6, 30, 37, 0.1);
-    border-radius: 12px !important;
-    .card-header {
-      padding: 0;
-      .btn {
-        text-decoration: none;
-        color: color(font-dark);
-        letter-spacing: 1px;
-        padding: 20px 25px;
+  .accordion {
+    padding: 20px 10px;
+    .card {
+      border: 0 !important;
+      box-shadow: 0 0 20px 0 rgba(6, 30, 37, 0.1);
+      border-radius: 12px !important;
+      .card-header {
+        padding: 0;
+        .btn {
+          text-decoration: none;
+          color: color(font-dark);
+          letter-spacing: 1px;
+          padding: 20px 25px;
+        }
+      }
+      .card-body {
+        padding: 5px 30px 30px;
       }
     }
-    .card-body {
-      padding: 5px 30px 30px;
+    .card + .card {
+      margin-top: 30px;
+    }
+
+    .collapsible-link::before {
+      content: "";
+      background-size: cover;
+      background-position: center;
+      background: url(../images/icons/arrowDown.png);
+      width: 47px;
+      height: 47px;
+      position: absolute;
+      top: 50%;
+      right: 1%;
+      transform: translateY(-50%) scale(0.4);
+      display: block;
+    }
+
+    .collapsible-link[aria-expanded="true"]::before {
+      content: "";
+      background-size: cover;
+      background-position: center;
+      background: url(../images/icons/lessthan.png);
+      transform: translateY(-50%) scale(0.4) rotate(90deg);
     }
   }
-  .card + .card {
-    margin-top: 30px;
-  }
 
-  .collapsible-link::before {
-    content: "";
-    background-size: cover;
-    background-position: center;
-    background: url(../images/icons/arrowDown.png);
-    width: 47px;
-    height: 47px;
-    position: absolute;
-    top: 50%;
-    right: 1%;
-    transform: translateY(-50%) scale(0.4);
-    display: block;
-  }
-
-  .collapsible-link[aria-expanded="true"]::before {
-    content: "";
-    background-size: cover;
-    background-position: center;
-    background: url(../images/icons/lessthan.png);
-    transform: translateY(-50%) scale(0.4) rotate(90deg);
+  .slider-nav {
+    margin: 0 0 10px;
+    .slick-dots {
+      bottom: -19px;
+      li {
+        button {
+          &:before {
+            background: #6771804a;
+          }
+        }
+        &.slick-active {
+          button {
+            &:before {
+              background: #56ccf2;
+              background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+            }
+          }
+        }
+      }
+    }
+    .slick-slide {
+      padding: 15px 10px;
+      .faqNavBlock {
+        background: color(font-white);
+        box-shadow: 0 0 20px 0 rgba(6, 30, 37, 0.1);
+        border-radius: 4px;
+        padding: 2px;
+        cursor: pointer;
+        transform: scale(1, 1);
+        border: 1px solid #fff;
+        padding: 20px 0;
+        transition: all 0.4s ease-in;
+        @include media-breakpoint-down(md) {
+          width: 350px !important;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 250px !important;
+        }
+        img {
+          margin: 0 auto 10px;
+          width: 35px;
+        }
+        p {
+          margin: 0;
+          text-align: center;
+          font-weight: 300;
+          letter-spacing: 0.5px;
+          @include breakpoint(xlr) {
+            font-size: 15px;
+          }
+        }
+      }
+      &.slick-current {
+        .faqNavBlock {
+          border: 1px solid #2f80ed;
+          box-shadow: 5px 5px 20px 4px rgba(6, 30, 37, 0.1);
+          transform: scale(1.05, 1.05);
+          transition: all 0.4s ease-in;
+        }
+      }
+      &:focus {
+        border: 0;
+        outline: none;
+      }
+    }
   }
 }
 //++++about page++++//

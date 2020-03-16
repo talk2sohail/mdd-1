@@ -20,6 +20,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    />
     <link rel="stylesheet" href="assets/css/main.min.css" />
   </head>
   <body>
@@ -192,182 +200,206 @@
         <div class="sectionWrapper">
           <div class="row no-gutters justify-content-center">
             <div class="col-12">
-              <div id="accordionExample" class="accordion">
-                <!-- Accordion item 1 -->
-                <div class="card">
-                  <div
-                    id="headingOne"
-                    class="card-header bg-white border-0 m-0"
-                  >
-                    <h2 class="mb-0">
-                      <button
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                        class="btn btn-link collapsed w-100 position-relative text-left collapsible-link"
-                      >
-                        Will your technician also fix any other issue of my
-                        phone?
-                      </button>
-                    </h2>
+              <div class="slider slider-nav">
+                <div class="faqNavBlock">
+                  <img src="assets/images/icons/audio-cable.png" alt="" />
+                  <p>General</p>
+                </div>
+                <div class="faqNavBlock">
+                  <img src="assets/images/icons/audio-cable.png" alt="" />
+                  <p>Repair</p>
+                </div>
+                <div class="faqNavBlock">
+                  <img src="assets/images/icons/audio-cable.png" alt="" />
+                  <p>Payment</p>
+                </div>
+                <div class="faqNavBlock">
+                  <img src="assets/images/icons/audio-cable.png" alt="" />
+                  <p>Pick Up, Drop & Delivery</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="slider slider-for">
+                <div id="accordionExample" class="accordion">
+                  <!-- Accordion item 1 -->
+                  <div class="card">
+                    <div
+                      id="headingOne"
+                      class="card-header bg-white border-0 m-0"
+                    >
+                      <h2 class="mb-0">
+                        <button
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="false"
+                          aria-controls="collapseOne"
+                          class="btn btn-link collapsed w-100 position-relative text-left collapsible-link"
+                        >
+                          Will your technician also fix any other issue of my
+                          phone?
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                      class="collapse"
+                    >
+                      <div class="card-body">
+                        <p class="font-weight-light m-0">
+                          It is definitely on the cards but for now, we only
+                          offer the services listed on our platform. Please let
+                          us know in advance for any issue with your device and,
+                          we will try our best to help.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    id="collapseOne"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordionExample"
-                    class="collapse"
-                  >
-                    <div class="card-body">
-                      <p class="font-weight-light m-0">
-                        It is definitely on the cards but for now, we only offer
-                        the services listed on our platform. Please let us know
-                        in advance for any issue with your device and, we will
-                        try our best to help.
-                      </p>
+                  <!-- End -->
+                </div>
+                <div id="accordionExampleTwo" class="accordion">
+                  <!-- Accordion item 2 -->
+                  <div class="card">
+                    <div id="headingTwo" class="card-header bg-white border-0">
+                      <h2 class="mb-0">
+                        <button
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                          class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
+                        >
+                          Will your technician also fix any other issue of my
+                          phone?
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionExampleTwo"
+                      class="collapse"
+                    >
+                      <div class="card-body">
+                        <p class="font-weight-light m-0">
+                          It is definitely on the cards but for now, we only
+                          offer the services listed on our platform. Please let
+                          us know in advance for any issue with your device and,
+                          we will try our best to help.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End -->
+                </div>
+                <div id="accordionExampleThree" class="accordion">
+                  <!-- Accordion item 3 -->
+                  <div class="card">
+                    <div id="headingFour" class="card-header bg-white border-0">
+                      <h2 class="mb-0">
+                        <button
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                          class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
+                        >
+                          Will your technician also fix any other issue of my
+                          phone?
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseFour"
+                      aria-labelledby="headingFour"
+                      data-parent="#accordionExampleThree"
+                      class="collapse"
+                    >
+                      <div class="card-body">
+                        <p class="font-weight-light m-0">
+                          It is definitely on the cards but for now, we only
+                          offer the services listed on our platform. Please let
+                          us know in advance for any issue with your device and,
+                          we will try our best to help.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End -->
+                </div>
+                <div id="accordionExampleFour" class="accordion">
+                  <!-- Accordion item 3 -->
+                  <div class="card">
+                    <div id="headingFive" class="card-header bg-white border-0">
+                      <h2 class="mb-0">
+                        <button
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                          class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
+                        >
+                          Will your technician also fix any other issue of my
+                          phone?
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseFive"
+                      aria-labelledby="headingFive"
+                      data-parent="#accordionExampleFour"
+                      class="collapse"
+                    >
+                      <div class="card-body">
+                        <p class="font-weight-light m-0">
+                          It is definitely on the cards but for now, we only
+                          offer the services listed on our platform. Please let
+                          us know in advance for any issue with your device and,
+                          we will try our best to help.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End -->
+                  <div class="card">
+                    <div id="headingSix" class="card-header bg-white border-0">
+                      <h2 class="mb-0">
+                        <button
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix"
+                          class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
+                        >
+                          Will your technician also fix any other issue of my
+                          phone?
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseSix"
+                      aria-labelledby="headingSix"
+                      data-parent="#accordionExampleFour"
+                      class="collapse"
+                    >
+                      <div class="card-body">
+                        <p class="font-weight-light m-0">
+                          It is definitely on the cards but for now, we only
+                          offer the services listed on our platform. Please let
+                          us know in advance for any issue with your device and,
+                          we will try our best to help.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <!-- End -->
-
-                <!-- Accordion item 2 -->
-                <div class="card">
-                  <div id="headingTwo" class="card-header bg-white border-0">
-                    <h2 class="mb-0">
-                      <button
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                        class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
-                      >
-                        Will your technician also fix any other issue of my
-                        phone?
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="collapseTwo"
-                    aria-labelledby="headingTwo"
-                    data-parent="#accordionExample"
-                    class="collapse"
-                  >
-                    <div class="card-body">
-                      <p class="font-weight-light m-0">
-                        It is definitely on the cards but for now, we only offer
-                        the services listed on our platform. Please let us know
-                        in advance for any issue with your device and, we will
-                        try our best to help.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End -->
-
-                <!-- Accordion item 3 -->
-                <div class="card">
-                  <div id="headingThree" class="card-header bg-white border-0">
-                    <h2 class="mb-0">
-                      <button
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                        class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
-                      >
-                        Will your technician also fix any other issue of my
-                        phone?
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="collapseThree"
-                    aria-labelledby="headingThree"
-                    data-parent="#accordionExample"
-                    class="collapse"
-                  >
-                    <div class="card-body">
-                      <p class="font-weight-light m-0">
-                        It is definitely on the cards but for now, we only offer
-                        the services listed on our platform. Please let us know
-                        in advance for any issue with your device and, we will
-                        try our best to help.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End -->
-                <!-- Accordion item 3 -->
-                <div class="card">
-                  <div id="headingFour" class="card-header bg-white border-0">
-                    <h2 class="mb-0">
-                      <button
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                        class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
-                      >
-                        Will your technician also fix any other issue of my
-                        phone?
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="collapseFour"
-                    aria-labelledby="headingFour"
-                    data-parent="#accordionExample"
-                    class="collapse"
-                  >
-                    <div class="card-body">
-                      <p class="font-weight-light m-0">
-                        It is definitely on the cards but for now, we only offer
-                        the services listed on our platform. Please let us know
-                        in advance for any issue with your device and, we will
-                        try our best to help.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End -->
-                <!-- Accordion item 3 -->
-                <div class="card">
-                  <div id="headingFive" class="card-header bg-white border-0">
-                    <h2 class="mb-0">
-                      <button
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                        class="btn btn-link collapsed w-100 position-relative text-left  collapsible-link"
-                      >
-                        Will your technician also fix any other issue of my
-                        phone?
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id="collapseFive"
-                    aria-labelledby="headingFive"
-                    data-parent="#accordionExample"
-                    class="collapse"
-                  >
-                    <div class="card-body">
-                      <p class="font-weight-light m-0">
-                        It is definitely on the cards but for now, we only offer
-                        the services listed on our platform. Please let us know
-                        in advance for any issue with your device and, we will
-                        try our best to help.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- End -->
               </div>
             </div>
           </div>
@@ -574,6 +606,52 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     <script src="assets/js/common.js"></script>
+    <script>
+      $(".slider-for").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".slider-nav"
+      });
+      $(".slider-nav").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: ".slider-for",
+        dots: false,
+        centerMode: false,
+        infinite: false,
+        focusOnSelect: true,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              dots: true,
+              variableWidth: true,
+              infinite: true,
+              centerMode: true
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              dots: true,
+              variableWidth: true,
+              infinite: true,
+              centerMode: true
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+    </script>
   </body>
 </html>
