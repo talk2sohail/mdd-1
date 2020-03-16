@@ -22,7 +22,7 @@
     />
     <link rel="stylesheet" href="assets/css/main.min.css" />
   </head>
-  <body>
+  <body class="editActive">
     <div
       id="landscape-message"
       class="align-items-center justify-content-center"
@@ -163,21 +163,21 @@
       <section class="profileWrapper">
         <div class="sectionWrapper">
           <div class="row justify-content-center">
-            <div class="col-lg-3 col-12">
+            <div class="col-lg-3 col-12 d-none d-lg-block">
               <div class="sideBarWrapper">
-                <a href="javascript:void(0)" class="sideBarBlock ">
+                <a href="profile.html" class="sideBarBlock ">
                   <h3>My Profile</h3>
                   <p>
-                    Your Name, Phone Number, Password, Gender, Date of Birth
+                    Your Name, Phone Number, Password, Gender,
                   </p>
                 </a>
-                <a href="javascript:void(0)" class="sideBarBlock active">
+                <a href="address.html" class="sideBarBlock active">
                   <h3>My Address</h3>
                   <p>
                     Add, Edit Addresses
                   </p>
                 </a>
-                <a href="javascript:void(0)" class="sideBarBlock">
+                <a href="appointments.html" class="sideBarBlock">
                   <h3>My Repairs</h3>
                   <p>
                     Status of Repair Appointments, Past Repairs
@@ -192,9 +192,16 @@
               </div>
             </div>
             <div class="col-lg-9 col-12">
-              <div class="userWrapper">
-                <div class="userHeader">
-                  <h2>Manage Address</h2>
+              <div class="userWrapper phoneFixed ">
+                <div class="userHeader justify-content-start">
+                  <a href="address.html" class="d-block d-lg-none">
+                    <img
+                      src="assets/images/icons/lessthan.png"
+                      width="22"
+                      class="mr-2"
+                    />
+                  </a>
+                  <h2>Add Address</h2>
                   <!-- <a href="javascript:void(0)">Edit Info</a> -->
                 </div>
                 <div class="userDetails addressChange">

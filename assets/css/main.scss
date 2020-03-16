@@ -292,6 +292,11 @@ body {
   &.mobileMenuActive {
     height: 100vh;
   }
+  &.editActive {
+    @include media-breakpoint-down(md) {
+      height: 100vh;
+    }
+  }
 }
 h1,
 h2,
@@ -592,6 +597,9 @@ input[type="radio"]:checked + label:after {
 //++++Main Menu++++//
 .siteHeader {
   padding: 20px 0;
+  @include media-breakpoint-down(md) {
+    padding: 12px 0;
+  }
   &.sticky {
     background: color(font-white);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
@@ -603,7 +611,7 @@ input[type="radio"]:checked + label:after {
     width: 100%;
     z-index: 99;
     @include media-breakpoint-down(md) {
-      padding: 10px 0;
+      padding: 8px 0;
     }
   }
   .logoWrapper {
@@ -642,7 +650,7 @@ input[type="radio"]:checked + label:after {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 7px;
         backdrop-filter: saturate(180%) blur(20px);
         border-radius: 6px;
-        z-index: 9;
+        z-index: 20;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -2473,6 +2481,9 @@ footer {
 .profileWrapper {
   background: color(bgcolor);
   padding: 50px 0;
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+  }
   .sideBarWrapper {
     background: color(font-white);
     .sideBarBlock + .sideBarBlock {
@@ -2493,6 +2504,10 @@ footer {
         margin: 0;
         letter-spacing: 1px;
         font-weight: 300;
+        @include breakpoint(xlr) {
+          font-size: 12px;
+          letter-spacing: 0.5px;
+        }
       }
       &.active {
         background: #6b7d851c;
@@ -2544,6 +2559,10 @@ footer {
       font-family: $prompt;
       color: color(font-dark);
       font-weight: 300;
+      @include media-breakpoint-down(sm) {
+        font-size: 15px;
+        line-height: 24px;
+      }
     }
     .userDetails {
       padding: 0 12px;
@@ -2570,10 +2589,16 @@ footer {
           letter-spacing: 1px;
           font-family: $prompt;
           font-weight: 300;
+          @include media-breakpoint-down(sm) {
+            font-size: 15px;
+          }
         }
         .editProfileDetails {
           width: 300px;
           margin: 0;
+          @include media-breakpoint-down(md) {
+            width: 100%;
+          }
           option {
             font-weight: 300;
             &:disabled {
@@ -2589,8 +2614,11 @@ footer {
           background: linear-gradient(-60deg, #2f80ed, #56ccf2);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-
           letter-spacing: 1px;
+          @include media-breakpoint-down(sm) {
+            font-size: 10px;
+            letter-spacing: 0.5px;
+          }
         }
         input[type="submit"],
         .cancel {
@@ -2603,6 +2631,9 @@ footer {
           border-radius: 4px;
           margin: 0;
           font-family: $comfor;
+          @include media-breakpoint-down(md) {
+            width: 100%;
+          }
         }
         .cancel {
           background: color(red-delete);
@@ -2713,6 +2744,10 @@ footer {
           font-weight: 300;
           letter-spacing: 1px;
           color: color(font-dark);
+          @include breakpoint(xlr) {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+          }
           span {
             opacity: 0.6;
             font-weight: 400;
@@ -2945,6 +2980,31 @@ footer {
               }
             }
           }
+        }
+      }
+    }
+    &.phoneFixed {
+      @include media-breakpoint-down(md) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 28px 18px 85px;
+      }
+      h3 {
+        @include media-breakpoint-down(sm) {
+          font-size: 17px;
+          padding: 0 0 10px;
+        }
+      }
+
+      .changePassword {
+        @include media-breakpoint-down(sm) {
+          font-size: 12px !important;
+          margin: 3px 0 0 11px !important;
         }
       }
     }
