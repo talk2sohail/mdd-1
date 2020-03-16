@@ -444,6 +444,9 @@ input[type="radio"]:checked + label:after {
     font-size: 45px;
     margin: 0 0 15px;
     padding: 0 0 15px;
+    @include media-breakpoint-down(sm) {
+      font-size: 35px;
+    }
     &:before {
       position: absolute;
       content: "";
@@ -678,6 +681,13 @@ input[type="radio"]:checked + label:after {
           position: absolute;
           top: -25%;
           right: -20%;
+          @include media-breakpoint-down(md) {
+            top: 13%;
+            right: 41%;
+          }
+          @include media-breakpoint-down(sm) {
+            right: 35%;
+          }
           &:before,
           &:after {
             content: "";
@@ -1992,6 +2002,9 @@ footer {
 }
 //++++Repair Page++++//
 .searchBar {
+  @include media-breakpoint-down(sm) {
+    position: relative;
+  }
   input {
     outline: 0;
     border: 0;
@@ -2018,6 +2031,13 @@ footer {
     top: 1px;
     border-radius: 6px;
     left: -45px;
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      height: 38px;
+      right: 5%;
+      left: unset;
+      top: 3px;
+    }
     img {
       width: 20px;
       height: 20px;
@@ -2043,49 +2063,123 @@ footer {
   // clip-path: ellipse(100% 55% at 48% 44%);
   color: color(font-white);
   text-align: center;
+  @include media-breakpoint-down(sm) {
+    padding: 50px 0 25px;
+  }
+  h1 {
+    @include media-breakpoint-down(sm) {
+      font-size: 27px;
+      line-height: 36px;
+    }
+  }
   .searchBar {
     input {
       width: 450px;
+      @include media-breakpoint-down(sm) {
+        width: 93%;
+        margin: 0 auto;
+      }
+    }
+    button {
     }
   }
 }
 .customerLogosWrapper {
   position: relative;
   top: -55px;
+  @include media-breakpoint-down(sm) {
+    top: -45px;
+  }
+  .wrapper {
+    @include media-breakpoint-down(sm) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      padding: 30px 0;
+      justify-content: flex-start !important;
+    }
+  }
 
   .customerLogo {
     width: auto;
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 5rem;
+    padding: 24px;
+    background: color(font-white);
+    border-radius: 80px;
     box-shadow: 0 0.19rem 0.38rem 0 rgba(41, 70, 97, 0.3);
     display: flex;
     position: relative;
     align-items: center;
     animation: float 7s ease-in-out infinite;
+    @include media-breakpoint-down(md) {
+      padding: 15px 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 11px 16px;
+    }
     img {
       height: 25px;
+      @include media-breakpoint-down(md) {
+        height: 18px;
+      }
+      @include media-breakpoint-down(sm) {
+        height: 15px;
+      }
     }
     &:first-child {
       animation-delay: 0s;
       top: -15px;
+      @include media-breakpoint-down(md) {
+        top: -7px;
+      }
     }
     &:nth-child(2) {
       animation-delay: 1.75s;
+      @include media-breakpoint-down(md) {
+        top: 4px;
+      }
     }
     &:nth-child(3) {
       animation-delay: 1s;
       top: -15px;
+      @include media-breakpoint-down(md) {
+        top: 12px;
+      }
+      img {
+        height: 30px;
+        @include media-breakpoint-down(md) {
+          height: 23px;
+        }
+        @include media-breakpoint-down(sm) {
+          height: 20px;
+        }
+      }
     }
     &:nth-child(4) {
       animation-delay: 0.5s;
       top: -19px;
+      @include media-breakpoint-down(md) {
+        top: 0px;
+      }
     }
     &:nth-child(5) {
       top: -29px;
+      @include media-breakpoint-down(md) {
+        top: -11px;
+      }
     }
     &:nth-child(6) {
       top: -38px;
+      @include media-breakpoint-down(md) {
+        top: -6px;
+      }
+      img {
+        height: 30px;
+        @include media-breakpoint-down(md) {
+          height: 23px;
+        }
+        @include media-breakpoint-down(sm) {
+          height: 20px;
+        }
+      }
     }
     &:nth-child(odd) {
       animation-delay: 0.5s;
@@ -2096,11 +2190,28 @@ footer {
     &:last-child {
       top: -15px;
       animation-delay: 2s;
+      @include media-breakpoint-down(md) {
+        top: 6px;
+      }
+      img {
+        height: 15px;
+        @include media-breakpoint-down(md) {
+          height: 10px;
+        }
+      }
+    }
+  }
+  .customerLogo + .customerLogo {
+    @include media-breakpoint-down(sm) {
+      margin-left: 10px;
     }
   }
 }
 .repairSelection {
   padding: 50px 0;
+  @include media-breakpoint-down(sm) {
+    padding: 30px 0;
+  }
   .progressBooking {
     border: 1px solid #67718042;
     padding: 15px 0px;
@@ -2108,6 +2219,10 @@ footer {
     color: color(font-dark);
     font-family: $comfor;
     font-size: 18px;
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+      padding: 11px 0;
+    }
     &.active {
       background: color(success-green);
       border: 1px solid color(success-green);
@@ -2121,6 +2236,11 @@ footer {
     }
   }
   .selectOption {
+    .mobileLeft {
+      @include media-breakpoint-down(sm) {
+        text-align: center !important;
+      }
+    }
     .buttons {
       a {
         padding: 15px 20px;
@@ -2137,27 +2257,48 @@ footer {
           rgba(86, 204, 242, 0.75)
         );
         border-color: rgba(86, 204, 242, 1);
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin: 0;
+          display: block;
+          text-align: center;
+        }
       }
     }
     h2 {
       font-size: 20px;
       padding-left: 10px;
+      @include media-breakpoint-down(md) {
+        font-size: 17px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 15px;
+      }
     }
     h3 {
       font-size: 14px;
       font-family: $comfor;
       font-weight: 500;
       letter-spacing: 1.5px;
-      // display: none;
+
       text-transform: uppercase;
+      @include media-breakpoint-down(sm) {
+        font-size: 12px;
+      }
     }
     padding: 20px 0 0;
     form {
       position: relative;
       right: -5%;
+      @include media-breakpoint-down(sm) {
+        right: unset;
+        margin: 0 0 10px;
+      }
       input {
         width: 300px;
-
+        @include media-breakpoint-down(sm) {
+          width: 95%;
+        }
         background-color: color(font-white);
         padding: 12px 45px 12px 19px;
         box-shadow: 0 0.19rem 0.38rem 0 rgba(41, 70, 97, 0.3);
@@ -2172,6 +2313,9 @@ footer {
       transition: all 0.4s ease;
       padding: 10px 0;
       cursor: pointer;
+      @include media-breakpoint-down(sm) {
+        margin: 0px 12px 25px;
+      }
       &:hover {
         transform: scale(1.05, 1.05);
         transition: all 0.4s ease;
@@ -2180,6 +2324,9 @@ footer {
       .imgWrapBrand {
         img {
           width: 80px;
+          @include media-breakpoint-down(md) {
+            width: 65px;
+          }
         }
       }
     }
@@ -2200,12 +2347,19 @@ footer {
     }
     .series {
       padding: 15px 0;
+      margin: 31px 12px 0px;
+      @include media-breakpoint-down(sm) {
+        margin: 14px 7px 10px;
+      }
       h4 {
         text-align: center;
         font-size: 20px;
         margin: 0;
         letter-spacing: 1px;
         font-weight: 300;
+        @include media-breakpoint-down(sm) {
+          font-size: 14px;
+        }
       }
       &:hover,
       &.active {
