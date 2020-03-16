@@ -2708,6 +2708,11 @@ footer {
     }
     .typesofAppointments {
       margin: 0 0 25px;
+      @include media-breakpoint-down(sm) {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 0 0 17px;
+      }
       a + a {
         margin-left: 10px;
       }
@@ -2736,6 +2741,9 @@ footer {
       .orderFoooter {
         padding: 18px 20px;
         border-bottom: 1px solid #67718029;
+        @include media-breakpoint-down(sm) {
+          padding: 18px 15px;
+        }
         p,
         span,
         a {
@@ -2774,6 +2782,16 @@ footer {
       }
       .orderFoooter {
         border: 0;
+        @include media-breakpoint-down(sm) {
+          flex-wrap: wrap;
+        }
+        p,
+        span {
+          @include media-breakpoint-down(md) {
+            font-size: 15px;
+            line-height: 26px;
+          }
+        }
       }
       .orderBody {
         padding: 18px 20px;
@@ -2782,12 +2800,15 @@ footer {
           max-width: 11%;
           flex-basis: 11%;
           @include media-breakpoint-down(sm) {
-            max-width: 27%;
-            flex-basis: 27%;
+            max-width: 23%;
+            flex-basis: 23%;
           }
           img {
             width: auto;
             height: 120px;
+            @include media-breakpoint-down(md) {
+              height: 95px;
+            }
             @include media-breakpoint-down(sm) {
               height: 88px;
             }
@@ -2797,8 +2818,8 @@ footer {
           max-width: 32%;
           flex-basis: 32%;
           @include media-breakpoint-down(sm) {
-            max-width: 73%;
-            flex-basis: 73%;
+            max-width: 77%;
+            flex-basis: 77%;
           }
           h3 {
             font-weight: 400;
@@ -2822,11 +2843,20 @@ footer {
           max-width: 45%;
           flex-basis: 45%;
           margin-left: auto;
+          @include media-breakpoint-down(sm) {
+            margin: 20px 0 0;
+            max-width: 100%;
+            flex-basis: 100%;
+          }
           h3 {
             font-size: 16px;
             text-align: right;
             position: relative;
             margin-left: auto;
+            @include media-breakpoint-down(sm) {
+              text-align: left;
+              letter-spacing: 1px;
+            }
             span {
               width: 10px;
               height: 10px;
@@ -2853,6 +2883,9 @@ footer {
             font-size: 15px;
             opacity: 0.7;
             margin-bottom: 0px;
+            @include media-breakpoint-down(sm) {
+              margin-left: unset;
+            }
           }
           .buttons {
             margin: 15px 0 0;
@@ -2862,6 +2895,10 @@ footer {
               font-size: 12px;
               display: block;
               width: max-content;
+              @include media-breakpoint-down(sm) {
+                width: 100%;
+                text-align: center;
+              }
             }
           }
         }
@@ -2872,26 +2909,36 @@ footer {
       padding: 18px 20px;
       .summaryBlock + .summaryBlock {
         padding-left: 10px;
+        @include media-breakpoint-down(md) {
+          padding: 0;
+          margin: 15px 0;
+        }
       }
       .summaryBlock {
         max-width: 33.33%;
         flex-basis: 33.33%;
+        @include media-breakpoint-down(sm) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
         h3 {
           font-weight: 400;
           letter-spacing: 1px;
+          @include media-breakpoint-down(sm) {
+            font-size: 20px;
+          }
         }
         p {
           font-weight: 300;
           margin: 0 0 2px;
+          @include breakpoint(xlr) {
+            font-size: 13px;
+          }
+          @include media-breakpoint-down(sm) {
+            font-size: 15px;
+          }
           span {
             font-weight: 400;
-          }
-        }
-        &.pricing {
-          p {
-            span {
-              float: right;
-            }
           }
         }
       }
@@ -2903,14 +2950,28 @@ footer {
       .imgWrap {
         max-width: 11%;
         flex-basis: 11%;
+        @include media-breakpoint-down(sm) {
+          max-width: 25%;
+          flex-basis: 25%;
+        }
         img {
           width: auto;
           height: 120px;
+          @include media-breakpoint-down(md) {
+            height: 95px;
+          }
+          @include media-breakpoint-down(sm) {
+            height: 80px;
+          }
         }
       }
       .contentWrap {
         max-width: 32%;
         flex-basis: 32%;
+        @include media-breakpoint-down(sm) {
+          max-width: 75%;
+          flex-basis: 75%;
+        }
         h3 {
           font-weight: 400;
         }
@@ -2923,60 +2984,98 @@ footer {
           }
         }
       }
-      .status {
-        max-width: 57%;
-        flex-basis: 57%;
-        ul {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
+      .pricing {
+        max-width: 32%;
+        flex-basis: 32%;
+        margin-left: auto;
+        @include media-breakpoint-down(sm) {
+          margin: 20px 0 0;
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+        h3 {
+          font-weight: 400;
+        }
+        p {
+          font-weight: 300;
+          margin: 0 0 2px;
+          span {
+            float: right;
+          }
+        }
+      }
+    }
+    .status {
+      border: 1px solid #67718029;
+      border-top: 0;
+      padding: 18px 20px;
+      width: 100%;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 0 35px;
+        padding: 0;
+        @include media-breakpoint-down(sm) {
           margin: 0 0 45px;
-          li {
-            max-width: 25%;
-            flex-basis: 25%;
-            width: 100%;
-            display: block;
-            height: 2px;
-            p {
-              font-size: 10px;
-              text-align: center;
-              margin: 0;
+        }
+        li {
+          max-width: 25%;
+          flex-basis: 25%;
+          width: 100%;
+          display: block;
+          height: 2px;
+          p {
+            font-size: 14px;
+            text-align: center;
+            margin: 0;
+            @include media-breakpoint-down(sm) {
+              font-size: 11px;
             }
-            .circleOuter {
+          }
+          .circleOuter {
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            top: -9px;
+
+            background: color(font-white);
+
+            padding: 3px;
+            @include media-breakpoint-down(md) {
+              width: 17px;
+              height: 17px;
+              top: -8px;
+            }
+            span {
               border-radius: 100%;
-              width: 20px;
-              height: 20px;
-              top: -9px;
-
-              background: color(font-white);
-
-              padding: 3px;
-              span {
-                border-radius: 100%;
-                width: 12px;
-                background: #67718029;
-                height: 12px;
-                display: block;
-                margin: 0 auto;
-              }
-            }
-            &.completed {
-              background: color(success-green);
-              .circleOuter {
-                border: 1px solid color(success-green);
-                span {
-                  background: color(success-green);
-                }
-              }
-            }
-            &.todo {
+              width: 12px;
               background: #67718029;
-              .circleOuter {
-                border: 1px solid #67718029;
-                span {
-                  background: #67718029;
-                }
+              height: 12px;
+              display: block;
+              margin: 0 auto;
+              @include media-breakpoint-down(md) {
+                width: 9px;
+                height: 9px;
+              }
+            }
+          }
+          &.completed {
+            background: color(success-green);
+            .circleOuter {
+              border: 1px solid color(success-green);
+              span {
+                background: color(success-green);
+              }
+            }
+          }
+          &.todo {
+            background: #67718029;
+            .circleOuter {
+              border: 1px solid #67718029;
+              span {
+                background: #67718029;
               }
             }
           }
