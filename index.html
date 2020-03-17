@@ -758,6 +758,62 @@
       <!-- Modal -->
       <div
         class="modal fade"
+        id="forgotPass"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="forgotPassswordTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true" class="font-weight-light"
+                  >&times;</span
+                >
+              </button>
+              <form action="#">
+                <h3>Forgot Password ?</h3>
+                <p class="mb-3">We will email you a link to reset it.</p>
+                <input type="email" placeholder="Email" />
+                <input type="submit" value="send" class="gradientBtn" />
+              </form>
+              <p class="font-weight-light">
+                Just remembered ?
+                <a
+                  class="gradientText"
+                  href="javascript:void(0)"
+                  data-target="#loginModalCenter"
+                  data-toggle="modal"
+                  data-dismiss="modal"
+                  >Log in</a
+                >
+                Instead
+              </p>
+              <p class="mb-0 font-weight-light">
+                Don’t have an account ? Please
+                <a
+                  class="gradientText"
+                  href="javascript:void(0)"
+                  data-target="#loginModalCenter"
+                  data-toggle="modal"
+                  data-dismiss="modal"
+                >
+                  Sign up
+                </a>
+                for exciting offers
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
         id="loginModalCenter"
         tabindex="-1"
         role="dialog"
@@ -776,6 +832,12 @@
                   <input type="text" placeholder="Name" />
                   <input type="email" placeholder="Email" />
                   <input type="password" placeholder="Password" />
+                  <input
+                    type="text"
+                    placeholder="Phone Number"
+                    pattern="[1-9]{1}[0-9]{9}"
+                    maxlength="10"
+                  />
 
                   <input type="submit" value="sign up" class="gradientBtn" />
                   <p class="login-info-text">- OR -</p>
@@ -793,7 +855,14 @@
                   </p>
                   <input type="email" placeholder="Email" />
                   <input type="password" placeholder="Password" />
-                  <a href="#" class="fogotPassword">Forgot your password?</a>
+                  <a
+                    href="javascript:void(0)"
+                    data-target="#forgotPass"
+                    class="fogotPassword"
+                    data-toggle="modal"
+                    data-dismiss="modal"
+                    >Forgot your password?</a
+                  >
 
                   <input type="submit" value="sign in" class="gradientBtn" />
                   <p class="login-info-text">- OR -</p>

@@ -31,6 +31,7 @@ signUpButton.addEventListener("click", () => {
 signInButton.addEventListener("click", () => {
   container.classList.remove("right-panel-active");
 });
+
 // mobile menu js
 $(".mobileMenuTrigger").click(function() {
   $(".mobileMenuWrapperOuter").addClass("on");
