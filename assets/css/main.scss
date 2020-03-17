@@ -67,7 +67,12 @@
 .flaticon-payment-method:before {
   content: "\f10a";
 }
-
+.flaticon-configuration:before {
+  content: "\f10c";
+}
+.flaticon-box:before {
+  content: "\f10d";
+}
 $font-Flaticon-user: "\f100";
 $font-Flaticon-home: "\f101";
 $font-Flaticon-supermarket: "\f102";
@@ -79,6 +84,8 @@ $font-Flaticon-smartphone: "\f107";
 $font-Flaticon-phone: "\f108";
 $font-Flaticon-delivery-boy: "\f109";
 $font-Flaticon-payment-method: "\f10a";
+$font-Flaticon-configuration: "\f10c";
+$font-Flaticon-box: "\f10d";
 
 [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
@@ -682,6 +689,17 @@ input[type="radio"]:checked + label:after {
               margin: 0 auto;
             }
           }
+          &.active {
+            i {
+              @include media-breakpoint-down(md) {
+                background: #56ccf2;
+                background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 500;
+              }
+            }
+          }
         }
         .circleWrapper {
           width: 10px;
@@ -719,108 +737,84 @@ input[type="radio"]:checked + label:after {
             border-radius: 100%;
           }
         }
-        .subMenuTree {
-          display: block;
-          position: absolute;
-          top: 100%;
-          opacity: 0;
-          visibility: hidden;
-          transform: translateY(10%);
-          border-radius: 6px;
-          background-color: color(bgcolor);
-          box-shadow: 0px 20px 40px 0px rgba(171, 181, 189, 0.4);
-          top: 145%;
-          z-index: 1;
-          left: -125px;
-          min-width: 180px;
-          border-top: 2px solid #2f80ed;
-          transition: all 0.2s ease-in;
-          ul {
-            list-style: none;
-            padding: 0;
 
+        .subMenu {
+          list-style: none;
+          top: calc(45px - 10px);
+          box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+          background-color: color(font-white);
+          border-radius: 8px;
+          display: none;
+          float: left;
+          padding: 15px 0;
+          position: absolute;
+          width: 210px;
+          z-index: 9;
+          margin-left: -100px;
+          li {
             margin: 0;
-            li {
-              text-align: left;
-              a {
-                color: color(font-dark);
-                width: 100%;
-                padding: 12px 15px;
-                display: block;
-                font-family: $comfor;
-                letter-spacing: 0.5px;
-                font-size: 15px;
-                font-weight: 300;
-              }
-            }
-            li + li {
-              border-top: 1px solid #67718042;
-            }
-          }
-          .cartMenuDrop {
-            padding: 10px 12px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
-            .contentWrapper {
-              text-align: left;
-              h5 {
-                font-size: 15px;
-                letter-spacing: 1px;
-              }
-              p {
-                color: #677180;
-                font-size: 11px;
-                margin: 0;
-              }
-            }
-            .priceWrap {
-              max-width: 38%;
-              flex-basis: 38%;
-              p {
-                font-size: 15px;
-                font-family: $comfor;
-                margin: 0;
-              }
-            }
-            a {
-              background: rgba(86, 204, 242, 1); /* fallback for old browsers */
-              background: -webkit-linear-gradient(
-                -60deg,
-                rgba(47, 128, 237, 0.75),
-                rgba(86, 204, 242, 0.75)
-              );
-              background: linear-gradient(
-                -60deg,
-                rgba(47, 128, 237, 0.75),
-                rgba(86, 204, 242, 0.75)
-              );
-              text-align: center;
-              width: 100%;
-              margin: 0;
-            }
-          }
-          .cartMenuDrop + .cartMenuDrop {
-            border-top: 1px solid #67718042;
-          }
-          .totalPrice {
             text-align: left;
-            p {
-              margin-bottom: 8px;
+            width: 100%;
+            a {
+              letter-spacing: 0.5px;
+              display: block;
+              color: color(font-dark);
+              padding: 5px 20px;
+              font-size: 14px;
+              font-weight: 300;
+              &.product {
+                padding: 5px 15px;
+                .content {
+                  margin-left: 10px;
+                  h3 {
+                    font-size: 15px;
+                    margin: 0 0 8px;
+                  }
+                  p {
+                    font-size: 13px;
+                    margin: 0 0 8px;
+                    &:last-child {
+                      margin: 0;
+                    }
+                    span {
+                      font-weight: 400;
+                    }
+                  }
+                }
+              }
+            }
+            &.rule {
+              border-bottom: 1px solid #6771804a;
+              margin: 11px 20px;
+              width: auto;
             }
           }
-          @include media-breakpoint-down(md) {
-            display: none;
+        }
+        &:hover {
+          .subMenu {
+            display: block;
+            &:before {
+              content: "";
+              width: 0;
+              height: 0;
+              position: absolute;
+              top: -6px;
+              left: 103px;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-bottom: 6px solid color(font-white);
+            }
           }
         }
         &.hasItems {
+          .subMenu {
+            margin-left: -175px;
+          }
           &:hover {
-            .subMenuTree {
-              transform: translateY(-5%);
-              opacity: 1;
-              // transition: all 0.4s ease-in;
-              visibility: visible;
+            .subMenu {
+              &:before {
+                left: 175px;
+              }
             }
           }
         }
@@ -2021,14 +2015,14 @@ footer {
     width: 100%;
     height: 100%;
     max-width: 300px;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    // background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background: color(bgcolor);
     overflow-y: auto;
     .mobileMenuCloseWrapper {
-      position: fixed;
+      position: absolute;
       top: 0%;
-      left: 64%;
+      left: 89%;
       font-size: 20px;
-      left: 64%;
       z-index: 10;
     }
     .mobile-menu-wrapper-header {
@@ -2046,15 +2040,15 @@ footer {
     }
     .mobileMenu {
       .borders {
-        border-bottom: 1px solid #67718042;
+        border-bottom: 1px solid #67718030;
         padding: 16px 20px;
         a {
           color: color(font-dark);
           display: block;
-          font-family: $comfor;
+          font-family: $mont;
           margin-bottom: 20px;
           letter-spacing: 1px;
-          font-weight: 300;
+          font-weight: 400;
           &:last-child {
             margin-bottom: 0;
           }
@@ -3429,9 +3423,10 @@ footer {
         @include media-breakpoint-down(sm) {
           width: 250px !important;
         }
-        img {
-          margin: 0 auto 10px;
-          width: 35px;
+        i {
+          margin: 0 auto 0px;
+          text-align: center;
+          font-size: 35px;
         }
         p {
           margin: 0;
@@ -3449,6 +3444,16 @@ footer {
           box-shadow: 5px 5px 20px 4px rgba(6, 30, 37, 0.1);
           transform: scale(1.05, 1.05);
           transition: all 0.4s ease-in;
+          i,
+          p {
+            background: #56ccf2;
+            background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          p {
+            font-weight: 400;
+          }
         }
       }
       &:focus {
