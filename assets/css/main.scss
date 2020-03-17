@@ -3574,3 +3574,106 @@ footer {
     letter-spacing: 0.8px;
   }
 }
+//++++feeedback++++//
+.feedbackBanner {
+  background: #56ccf2;
+  background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+  padding: 80px 0 250px;
+  @include media-breakpoint-down(md) {
+    padding: 40px 0 250px;
+  }
+  color: color(font-white);
+  .contentWrap {
+    h1 {
+      font-size: 35px;
+      letter-spacing: 1px;
+      line-height: 49px;
+      margin: 0 0 15px;
+      @include media-breakpoint-down(sm) {
+        font-size: 29px;
+        line-height: 40px;
+      }
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+  .scrollForMore {
+    position: relative;
+    &:before {
+      @include media-breakpoint-down(sm) {
+        content: "SCROLL \2192";
+        font-family: $prompt;
+        letter-spacing: 2px;
+        font-size: 10px;
+        color: color(font-white);
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: block;
+        width: max-content;
+      }
+    }
+  }
+  .contactDetailsWrap {
+    margin: 10px 0 20px;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      justify-content: flex-start !important;
+      padding: 0 0 20px;
+    }
+    .detailsBlock {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: color(font-white);
+      border-radius: 36px;
+      padding: 10px 15px;
+      box-shadow: 0 0 20px 0 rgba(6, 30, 37, 0.1);
+      padding: 8px 15px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      color: color(font-dark);
+      img {
+        margin-right: 10px;
+      }
+    }
+    .detailsBlock + .detailsBlock {
+      margin-left: 10px;
+    }
+  }
+}
+.feedbackFormWrap {
+  // padding: 100px 0 80px;
+  position: relative;
+  top: -190px;
+  margin-bottom: -100px;
+  form {
+    padding: 45px 40px;
+    box-shadow: 10px 10px 20px 9px rgba(6, 30, 37, 0.1);
+    border-radius: 6px;
+    @include media-breakpoint-down(sm) {
+      padding: 35px 30px;
+    }
+    input {
+      width: 98%;
+      display: block;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+    input[type="submit"] {
+      background: #56ccf2;
+      background: linear-gradient(-60deg, #2f80ed, #56ccf2);
+      color: color(font-white);
+      letter-spacing: 1.5px;
+      font-family: $comfor;
+      font-weight: 500;
+    }
+  }
+}
