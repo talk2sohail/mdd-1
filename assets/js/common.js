@@ -19,6 +19,15 @@ $(window).on("scroll load", function() {
     ? $(".siteHeader").addClass("sticky")
     : $(".siteHeader").removeClass("sticky");
 });
+// mobile menu js
+$(".mobileMenuTrigger").click(function() {
+  $(".mobileMenuWrapperOuter").addClass("on");
+  $("body").addClass("mobileMenuActive");
+});
+$(".mobileMenuCloseWrapper").click(function() {
+  $(".mobileMenuWrapperOuter").removeClass("on");
+  $("body").removeClass("mobileMenuActive");
+});
 //Login Signup Popup
 const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("signIn");
@@ -30,14 +39,4 @@ signUpButton.addEventListener("click", () => {
 
 signInButton.addEventListener("click", () => {
   container.classList.remove("right-panel-active");
-});
-
-// mobile menu js
-$(".mobileMenuTrigger").click(function() {
-  $(".mobileMenuWrapperOuter").addClass("on");
-  $("body").addClass("mobileMenuActive");
-});
-$(".mobileMenuCloseWrapper").click(function() {
-  $(".mobileMenuWrapperOuter").removeClass("on");
-  $("body").removeClass("mobileMenuActive");
 });
