@@ -3056,6 +3056,10 @@ footer {
         max-width: 32%;
         flex-basis: 32%;
         margin-left: auto;
+        @include breakpoint(xlr) {
+          max-width: 40%;
+          flex-basis: 40%;
+        }
         @include media-breakpoint-down(sm) {
           margin: 20px 0 0;
           max-width: 100%;
