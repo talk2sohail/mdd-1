@@ -3238,6 +3238,12 @@ footer {
       .price {
         font-weight: 300;
         margin: 0 0 15px;
+        @include breakpoint(xlr) {
+          font-size: 13px;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 15px;
+        }
         span {
           font-weight: 400;
         }
